@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.dropdown{
+  display: none;
+}
+.show{
+  display: block;
+}
+.item{
+  border: 1px solid white;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+} 
