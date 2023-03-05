@@ -2,8 +2,13 @@ import Head from "next/head";
 import Post from "@/components/Post";
 import SuggestionBox from "@/components/SuggestionBox";
 import Navbar from "@/components/Navbar";
-// import styles from "@/styles/globals.css"
+import styles from "@/styles/Post.module.css"
+import Router from "next/router";
+
 export default function Post1() {
+  function handleButton() {
+    Router.push("/aman");
+  }
   return (
     <>
       <Head>
@@ -12,12 +17,28 @@ export default function Post1() {
       </Head>
       <main>
         <Navbar />
-        <SuggestionBox id={"i"} />
-        <Post username={"Amogh"} hasImage={true} postId={"i"} />
-        <button className="trendingBtn"> Trending ../</button>
-        <Post username={"Amit"} hasImage={true} postId={"i"} />
-        <Post username={"Aman"} hasImage={true} postId={"i"} />
-        <Post username={"Nishant"} hasImage={true} postId={"i"} />
+        <SuggestionBox peopleData={"data"} />
+
+        <Post
+          username={"Amogh"}
+          hasImage={true}
+          postId={"i"}
+          hasLiked={false}
+          ishisFriend={true}
+        />
+        <button className={styles.trendingBtn} onClick={handleButton}>
+          {" "}
+          Trending ../
+        </button>
+        <Post username={"Amit"} hasImage={false} postId={"i"} hasLiked={true} ishisFriend={true}/>
+        <Post username={"Aman"} hasImage={true} postId={"i"} hasLiked={false} ishisFriend={true}/>
+        <Post
+          username={"Nishant"}
+          hasImage={true}
+          postId={"i"}
+          hasLiked={false}
+          ishisFriend={false}
+        />
       </main>
     </>
   );
