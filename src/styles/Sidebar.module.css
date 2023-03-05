@@ -1,21 +1,11 @@
-.sideBar{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 80%;
-    height: 100vh;
-    /* border: 2px solid red; */
-    /* border-right: 1px solid black; */
-    border-radius: 5px;
-    box-shadow: 20px 0px 50px grey;
-    z-index: 100;
-    background-color: white;
-}
+
+
 .sidebarBox{
     /* margin-top: 3vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
 }
 .item1{
     margin-top: 3vh;
