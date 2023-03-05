@@ -1,3 +1,4 @@
+import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
 import Trending from "@/components/Trending";
 import Head from "next/head";
@@ -12,6 +13,7 @@ export default function trending() {
       <main>
         <Topbar />
         <Trending />
+        {/* <Sidebar/> */}
       </main>
     </>
   );
