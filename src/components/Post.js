@@ -8,7 +8,7 @@ import profile from "assets/images/profileimage5.jpg"
 import { FavoriteBorder } from "@mui/icons-material";
 import { useState } from 'react';
 import { CommentForm } from "./CommentForm";
-import { Check } from "@mui/icons-material";
+import { CheckCircle } from "@mui/icons-material";
 
 export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}) {
   const [isClicked, setIsClicked] = useState(hasLiked);
@@ -48,7 +48,7 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
         (!isClicked &&<FavoriteBorder className={styles.post__icons} onClick={handleFavouriteClick}/>)}
         <CommentIcon className={styles.post__icons} onClick={handleComment} />
         {(!isFriend &&<AddIcon className={styles.post__add} onClick={handleFriend}/>) ||
-        (isFriend &&<Check className={styles.post__add} onClick={handleFriend}/>)}
+        (isFriend &&<CheckCircle className={styles.post__add} onClick={handleFriend}/>)}
       </div>
       {isComment && <CommentForm setIsComment={setIsComment} URL={"https://............"} />}
     </div>
