@@ -1,16 +1,28 @@
 import "./../styles/Navbar.module.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { motion } from "framer-motion";
+import { motion , AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import Sidebar from "./Sidebar";
 
 const Topbar = () => {
+  const [leftBar,setLeftBar] = useState(false)
+  const handleSideBar = ()=>{
+    setLeftBar(true)
+    console.log(leftBar)
+  }
   return (
+    
     <motion.div
+    
       className="topbarBox"
       id="topbarBoxId"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
+      
+      {leftBar && (<Sidebar leftBar = {leftBar} setLeftBar = {setLeftBar}></Sidebar>)}
       <motion.div
+        onClick={handleSideBar}
         initial={{ x: -100 }}
         animate={{ x: 5 }}
         transition={{ duration: 0.5 }}
@@ -33,14 +45,7 @@ const Topbar = () => {
       >
         Good Morning!!
       </motion.p>
-      <motion.button
-        className="topbarButton"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        View Account
-      </motion.button>
+      
       <div className="color1"></div>
       <div className="study">Study</div>
       <hr />
