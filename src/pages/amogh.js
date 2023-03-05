@@ -2,8 +2,7 @@ import Head from "next/head";
 import Post from "@/components/Post";
 import SuggestionBox from "@/components/SuggestionBox";
 import Navbar from "@/components/Navbar";
-import Navbar from "@/components/Navbar";
-// import styles from "@/styles/globals.css"
+import styles from "@/styles/Post.module.css"
 import Router from "next/router";
 
 export default function Post1() {
@@ -27,7 +26,7 @@ export default function Post1() {
           hasLiked={false}
           ishisFriend={true}
         />
-        <button className="trendingBtn" onClick={handleButton}>
+        <button className={styles.trendingBtn} onClick={handleButton}>
           {" "}
           Trending ../
         </button>
