@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Topbar from "@/components/Topbar";
 import Trending from "@/components/Trending";
 import Head from "next/head";
 
@@ -10,8 +11,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <Trending />
-        <Navbar/>
+        {/* <Trending />
+        <Navbar/> */}
+        <Topbar/>
       </main>
     </>
   );
