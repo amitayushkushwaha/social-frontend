@@ -3,6 +3,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { motion , AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
+import styles from "@/styles/Topbar.module.css";
+
 
 const Topbar = () => {
   const [leftBar,setLeftBar] = useState(false)
@@ -19,8 +21,14 @@ const Topbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      
-      {leftBar && (<Sidebar leftBar = {leftBar} setLeftBar = {setLeftBar}></Sidebar>)}
+      <AnimatePresence>
+      {leftBar && (<motion.div className={styles.preSidebar}
+      initial = {{x:'-100vw'}}
+      animate = {{x:0}}
+      transition = {{duration : 1}}
+      exit={{x:'-100vw',transition:{duration:1}}}
+      ><Sidebar leftBar = {leftBar} setLeftBar = {setLeftBar}></Sidebar></motion.div>)}
+      </AnimatePresence>
       <motion.div
         onClick={handleSideBar}
         initial={{ x: -100 }}
