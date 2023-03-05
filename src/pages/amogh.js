@@ -2,6 +2,7 @@ import Head from "next/head";
 import Post from "@/components/Post";
 import SuggestionBox from "@/components/SuggestionBox";
 import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 // import styles from "@/styles/globals.css"
 import Router from "next/router";
 

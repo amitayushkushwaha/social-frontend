@@ -12,21 +12,3 @@
   box-sizing: border-box;
 }
 
-.trendingBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1;
-  border-radius: 25px;
-  padding-left: 2%;
-  padding-right: 2%;
-  font-size: 110%;
-  background-color: blue;
-  border: 3px solid white;
-  /* border: 3px dotted green; */
-  color: white;
-}
-
-
-
-
