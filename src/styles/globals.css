@@ -1,18 +1,30 @@
+
+:root {
+    --padding-top:3%;
+    --padding-bottom:5%;
+    --post-color: whitesmoke;
+
+}
+
 * {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   box-sizing: border-box;
 }
 
-.dropdown{
-  display: none;
-}
-.show{
-  display: block;
-}
-.item{
-  border: 1px solid white;
-  padding: 1rem;
-  background-color: black;
+.trendingBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 25px;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 110%;
+  background-color: blue;
+  border: 3px solid white;
+  /* border: 3px dotted green; */
   color: white;
-} 
+}
+
+

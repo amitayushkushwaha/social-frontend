@@ -1,8 +1,7 @@
-import Navbar from "@/components/Navbar";
 import Trending from "@/components/Trending";
 import Head from "next/head";
 
-export default function Home() {
+export default function trending() {
   return (
     <>
       <Head>
@@ -11,7 +10,6 @@ export default function Home() {
       </Head>
       <main>
         <Trending />
-        <Navbar/>
       </main>
     </>
   );
