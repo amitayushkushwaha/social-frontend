@@ -15,6 +15,18 @@ const Navbar = () => {
         setSunny(true)
         console.log(sunny)
     }
+    const dropdownVariants = {
+        hidden : {
+            x:'100vh'
+        },
+        visible:{
+            x:0,
+            transition:{
+                duration : 1
+            }
+        }
+
+    }
     return ( 
         <div className={styles.navbar}>
             <motion.div className={styles.leftNavbar}>
@@ -36,6 +48,9 @@ const Navbar = () => {
             {toggle && (
                 <motion.div className={styles.dropdownComp}
                 exit = {{opacity : 0 , transition : {duration : .5}}}
+                variants = {dropdownVariants}
+                initial = "hidden"
+                animate = "visible"
                 ><Dropdown toggle = {toggle} setToggle = {setToggle}/></motion.div>
             )}
             

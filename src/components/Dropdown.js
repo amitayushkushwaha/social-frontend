@@ -5,34 +5,51 @@ const Dropdown = ({toggle,setToggle}) => {
         setToggle(false)
         console.log(toggle)
     }
-    const dropdownVariants = {
-        hidden : {
-            x:'100vh'
-        },
-        visible:{
-            x:0,
-            transition:{
-                duration : 1
-            }
-        }
-
-    }
+    
     return ( 
         <motion.div className={styles.dropdown}
-        variants = {dropdownVariants}
-        initial = "hidden"
-        animate = "visible"
+        
         >
             <div className={styles.dropdownItem}>
-                <div className={styles.box}>
+                <motion.div className={styles.box}
+                whileHover = {{backgroundColor : "#ef5777" , scale : 1.1}}
+                >
                     ITEM1
-                </div>
-                <div className={styles.box}>
+                </motion.div>
+                <motion.div className={styles.box}
+                whileHover = {{backgroundColor : "#575fcf" , scale : 1.1}}
+                
+                >
                     ITEM2
-                </div>
+                </motion.div>
+                <motion.div className={styles.box}
+                whileHover = {{backgroundColor : "#0fbcf9" , scale : 1.1}}
+                
+                >
+                    ITEM3
+                </motion.div>
+                <motion.div className={styles.box}
+                whileHover = {{backgroundColor : "#0be881" , scale : 1.1}}
+                
+                >
+                    ITEM4
+                </motion.div>
+                <motion.div className={styles.box}
+                whileHover = {{backgroundColor : "#8854d0" , scale : 1.1}}
+                
+                >
+                    ITEM5
+                </motion.div>
+                <motion.div className={styles.box}
+                whileHover = {{backgroundColor : "#2C3A47" , scale : 1.1}}
+                
+                >
+                    ITEM6
+                </motion.div>
                 <div className={styles.box}>
                 <button className={styles.toggleClose}
                 onClick = {handleCloseToggle}
+                whileHover = {{scale : 1.1 , backgroundColor : '#ff3838'}}
                 >Close</button>
                 </div>
             </div>
