@@ -1,3 +1,5 @@
+import Dropdown from "@/components/Dropdown";
+import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
 import Trending from "@/components/Trending";
@@ -11,9 +13,11 @@ export default function trending() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
+        <Navbar/>
+        
         <Topbar />
         <Trending />
-        {/* <Sidebar/> */}
+        
       </main>
     </>
   );
