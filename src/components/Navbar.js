@@ -1,37 +1,47 @@
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import styles from "@/styles/Navbar.module.css";
-
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
+import LegendToggleOutlinedIcon from '@mui/icons-material/LegendToggleOutlined';
+import styles from '@/styles/Navbar.module.css'
+import {motion , AnimatePresence} from 'framer-motion'
+import { useState } from 'react';
+import Dropdown from './Dropdown';
 const Navbar = () => {
-    const handleLight = () => {
-        console.log("light mode")
-        
+    const[toggle,setToggle] = useState(false)
+    const[sunny,setSunny] = useState(false)
+    const handleToggleClick = ()=>{
+        setToggle(true)
+        console.log(toggle)
     }
-    const handleToggle = () => {
-        
-        document.getElementById("dropdownId").classList.toggle("show")
+    const handleSunnyClick = ()=>{
+        setSunny(true)
+        console.log(sunny)
     }
-    return (
-        <div className="navbar-2">
+    return ( 
         <div className={styles.navbar}>
-            <div className={styles.left}>
-                Logo
+            <motion.div className={styles.leftNavbar}>
+                e<span className={styles.leftNavbarTitle}>Chat</span>
+            </motion.div>
+            <div className="rightNavbar">
+                <div className={styles.icons}>
+                    <motion.div className={styles.sunny}
+                    onClick = {handleSunnyClick}
+                    whileHover = {{scale:1.3 , color : '#2c2c54',rotateY : 360,transition : {duration : .7}}}
+                    ><WbSunnyOutlinedIcon/></motion.div>
+                    <motion.div className={styles.toggle}
+                    onClick = {handleToggleClick}
+                    whileHover = {{scale:1.3 , color : '#2c2c54',rotateY : 360,transition : {duration : .5}}}
+                    ><LegendToggleOutlinedIcon/></motion.div>
+                </div>
             </div>
-            <div className={styles.right}>
-                <span onClick={handleLight} id="lightModeId"><LightModeOutlinedIcon className={styles.lightMode} /></span>
-                <span onClick={handleToggle} id="toggleBtnId"><MenuOutlinedIcon className={styles.toggleBtn} /></span>
-            </div>
+            <AnimatePresence>
+            {toggle && (
+                <motion.div className={styles.dropdownComp}
+                exit = {{opacity : 0 , transition : {duration : .5}}}
+                ><Dropdown toggle = {toggle} setToggle = {setToggle}/></motion.div>
+            )}
             
+            </AnimatePresence>
         </div>
-            <div className="dropdown" id="dropdownId">
-                <div className='item'>item1</div>
-                <div className='item'>item2</div>
-                <div className='item'>item3</div>
-            </div>
-        </div>
-
-
-    );
+     );
 }
-
+ 
 export default Navbar;

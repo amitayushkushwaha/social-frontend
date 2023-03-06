@@ -29,14 +29,12 @@ const Topbar = () => {
       exit={{x:'-100vw',transition:{duration:1}}}
       ><Sidebar leftBar = {leftBar} setLeftBar = {setLeftBar}></Sidebar></motion.div>)}
       </AnimatePresence>
-      <motion.div
+      <motion.span
         onClick={handleSideBar}
-        initial={{ x: -100 }}
-        animate={{ x: 5 }}
-        transition={{ duration: 0.5 }}
+        whileHover = {{scale : 1.3}}
       >
         <AccountCircleIcon fontSize="large" />
-      </motion.div>
+      </motion.span>
       <motion.div
         className="appName"
         initial={{ x: "-100vw" }}
