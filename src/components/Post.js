@@ -39,16 +39,20 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
       </div>
 
       { hasImage && <Image className={styles.post__image} src={Chillies} />}
-      <p className="post__content">
-        sijgipjgirej rjgoirejo hejoerh thi htihk thtkh thkoek rho rkekojjmholt
-        iifjuihituyj9jmi tjjhre hjrejgs jgirjyrsnihm
+      <p className={styles.post__content}>
+        sijgipjgirej rjgoirejo eohfdddd
+        dddddddddddddddddddddddddddd
+        ddddddddddddddddddddddddddddddd
+        dddddddddddddddddddd
+        dddddddddddddddddddddddddddddddd
+        dddddddddddddddddddddddddd
       </p>
       <div className={styles.post__icon}>
-        {(isClicked &&<FavoriteIcon className={styles.post__icons} onClick={handleFavouriteClick}/>) || 
-        (!isClicked &&<FavoriteBorder className={styles.post__icons} onClick={handleFavouriteClick}/>)}
-        <CommentIcon className={styles.post__icons} onClick={handleComment} />
-        {(!isFriend &&<AddIcon className={styles.post__add} onClick={handleFriend}/>) ||
-        (isFriend &&<CheckCircle className={styles.post__add} onClick={handleFriend}/>)}
+        {(isClicked &&<FavoriteIcon className={`${styles.post__icons} ${styles.post__large}`}  onClick={handleFavouriteClick}/>) || 
+        (!isClicked &&<FavoriteBorder className={`${styles.post__icons} ${styles.post__large}`}  onClick={handleFavouriteClick}/>)}
+        <CommentIcon className={`${styles.post__icons} ${styles.post__large}`} onClick={handleComment} />
+        {(!isFriend &&<AddIcon className={`${styles.post__add} ${styles.post__large}`} onClick={handleFriend}/>) ||
+        (isFriend &&<CheckCircle className={`${styles.post__add} ${styles.post__large}`}  onClick={handleFriend}/>)}
       </div>
       {isComment && <CommentForm setIsComment={setIsComment} URL={"https://............"} />}
     </div>
