@@ -8,7 +8,13 @@ const Navbar = () => {
     const[toggle,setToggle] = useState(false)
     const[sunny,setSunny] = useState(false)
     const handleToggleClick = ()=>{
-        setToggle(true)
+        if(toggle == false){
+            setToggle(true)
+        }
+        else{
+            setToggle(false)
+
+        }
         console.log(toggle)
     }
     const handleSunnyClick = ()=>{
