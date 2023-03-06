@@ -1,24 +1,33 @@
 .suggestionBox {
     background-color: #fff;
-    border: 1px solid #ccc;
+  
     border-radius: 5%;
-    padding: 3%;
-    width: 100%;
+    padding-top: 3%;
+    padding-left: 2%;
     margin-bottom: 5%;
     margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+    overflow-x: scroll; /*for horizontal schrolling */
+    box-shadow: 0 0 32px 2px var(--post-color);
+    overflow-y: hidden;
+   
   }
   
   .title {
     color: #000;
     font-size: 16px;
     font-weight: bold;
-    margin: 0 0 16px;
+    margin: 0 0 3%;
+    position: sticky;
   }
   
   .peopleList {
     display: flex; 
-    flex-wrap: wrap; /* To make items go in next line */ 
-     justify-content: space-between; /* To generate space between images */
+   /* flex-wrap: wrap;*/ /* To make items go in next line */ 
+    justify-content: space-between; /* To generate space between images */
+     white-space: nowrap;
   }
   
   .person {
@@ -38,5 +47,28 @@
     color: #000;
     font-size: 14px;
     margin: 4px 0 0;
+  }
+
+  @media (min-width:1000px){
+    .personImage{
+      height: 150px;
+      width: 150px;
+    }
+
+    .personName{
+      font-size: 20px;
+    }
+
+    .person{
+      margin-left:80px;
+    }
+
+    .title{
+      font-size: 30px;
+    }
+
+    .suggestionBox{
+      border-radius: 20px;
+    }
   }
   
