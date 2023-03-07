@@ -50,7 +50,6 @@ const Trending = () => {
         animate = "visible"
         >Trending</motion.button>
       </div>
-      <hr />
       <div className="topics">#topics</div>
       <div className={styles.content}>
         <motion.div className={styles.contentBox}
@@ -75,7 +74,7 @@ const Trending = () => {
         ></motion.div>
       </div>
       <hr />
-      <div className="posts">#posts</div>
+      <div className={styles.posts}>#posts</div>
     </div>
   );
 };
