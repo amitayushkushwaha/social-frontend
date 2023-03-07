@@ -38,15 +38,35 @@ const Navbar = () => {
             <motion.div className={styles.leftNavbar}>
                 e<span className={styles.leftNavbarTitle}>Chat</span>
             </motion.div>
-            <div className="rightNavbar">
+            <div className={styles.rightNavbar}>
+                <div className={styles.media}>
+                    <div className={styles.itm}>
+                        ITEM1
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM2
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM3
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM4
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM5
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM6
+                    </div>
+                </div>
                 <div className={styles.icons}>
                     <motion.div className={styles.sunny}
                     onClick = {handleSunnyClick}
-                    whileHover = {{scale:1.3 , color : '#2c2c54',rotateY : 360,transition : {duration : .7}}}
+                    whileHover = {{scale:1.3 , color : '#2c2c54',transition : {duration : .3}}}
                     ><WbSunnyOutlinedIcon/></motion.div>
                     <motion.div className={styles.toggle}
                     onClick = {handleToggleClick}
-                    whileHover = {{scale:1.3 , color : '#2c2c54',rotateY : 360,transition : {duration : .5}}}
+                    whileHover = {{scale:1.3 , color : '#2c2c54',transition : {duration : .2}}}
                     ><LegendToggleOutlinedIcon/></motion.div>
                 </div>
             </div>

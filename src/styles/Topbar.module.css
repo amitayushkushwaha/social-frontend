@@ -1,13 +1,27 @@
 .preSidebar{
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 80%;
-      height: 100%;
-      /* border: 2px solid red; */
-      /* border-right: 1px solid black; */
-    border-radius: 5px;
-    box-shadow: 20px 0px 50px grey;
-    z-index: 100;
-    background-color: white;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  /* border: 2px solid red; */
+  /* border-right: 1px solid black; */
+  border-radius: 5px;
+  box-shadow: 20px 0px 50px grey;
+  z-index: 100;
+  background-color: white;
+}
+.topbarBox{
+  font-size: 2rem;
+}
+
+@media screen and (min-width : 750px){
+  .preSidebar{
+    width: 60%;
   }
+}
+@media screen and (min-width : 1500px){
+  .preSidebar{
+    width: 40%;
+  }
+}

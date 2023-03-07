@@ -2,6 +2,7 @@
 .navbar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     height: 8vh;
     width: 100%;
@@ -18,9 +19,12 @@
     margin-right: 30px;
 }
 .leftNavbar{
+    display: flex;
+    align-items: center;
+    height: 100%;
     font-size: 2rem;
-    position: relative;
-    bottom: 10px;
+    /* position: relative;
+    bottom: 10px; */
     color: #2c2c54;
 }
 .leftNavbarTitle{
@@ -38,4 +42,28 @@
     box-shadow: -20px 10px 50px grey;
     z-index: 100;
     background-color: #D9D9D9;
+}
+/* media queries */
+@media screen and (min-width : 1000px){
+    .toggle{
+        display: none;
+    }
+    .media{
+        display: flex;
+    }
+    .itm{
+        padding: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .rightNavbar{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+@media screen and (max-width : 1000px){
+    .media{
+        display: none;
+    }
 }
