@@ -9,7 +9,8 @@
     /* border: 2px solid red; */
     background-color: #D9D9D9;
     border-bottom: 2px solid #2c2c54;
-    
+    position: relative;
+    z-index: 100;
 }
 .icons{
     margin-right: 5px;
@@ -35,12 +36,12 @@
     right: 0;
     position: fixed;
     width: 30%;
-      height: 70%;
-      /* border: 2px solid red; */
-      /* border-right: 1px solid black; */
+    height: 70%;
+    /* border: 2px solid red; */
+    /* border-right: 1px solid black; */
     border-radius: 5px;
     box-shadow: -20px 10px 50px grey;
-    z-index: 100;
+    z-index: 200;
     background-color: #D9D9D9;
 }
 /* media queries */

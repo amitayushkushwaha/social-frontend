@@ -23,13 +23,16 @@ const Navbar = () => {
     }
     const dropdownVariants = {
         hidden : {
-            x:'100vh'
+            y:'0vh',
+           
         },
         visible:{
-            x:0,
+            y:0,
             transition:{
+                
                 duration : 1
-            }
+            },
+            
         }
 
     }
