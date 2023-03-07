@@ -26,14 +26,28 @@ const Trending = () => {
     hover:{
       scale:1.2,
       backgroundColor: '#ff5252'
+    },
+    hidden:{
+      x:'100vw'
+    },
+    visible:{
+      x:0,
+      transition : {
+        type : 'spring',
+        duration : 1
+      },
+      
     }
+    
   }
   return (
-    <div className="trending">
+    <div className={styles.trending}>
       <div className={styles.buttonBox}>
         <motion.button className={styles.trendingBtn}
         variants = {buttonHover}
         whileHover = "hover"
+        initial = "hidden"
+        animate = "visible"
         >Trending</motion.button>
       </div>
       <hr />
