@@ -12,6 +12,7 @@
     position: relative;
     z-index: 100;
     box-shadow: 0 5px 45px #F5C6AA;
+    overflow-x: hidden;
 }
 .icons{
     margin-right: 5px;
