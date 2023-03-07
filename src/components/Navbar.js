@@ -1,37 +1,91 @@
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import styles from "@/styles/Navbar.module.css";
-
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
+import LegendToggleOutlinedIcon from '@mui/icons-material/LegendToggleOutlined';
+import styles from '@/styles/Navbar.module.css'
+import {motion , AnimatePresence} from 'framer-motion'
+import { useState } from 'react';
+import Dropdown from './Dropdown';
 const Navbar = () => {
-    const handleLight = () => {
-        console.log("light mode")
-        
+    const[toggle,setToggle] = useState(false)
+    const[sunny,setSunny] = useState(false)
+    const handleToggleClick = ()=>{
+        if(toggle == false){
+            setToggle(true)
+        }
+        else{
+            setToggle(false)
+
+        }
+        console.log(toggle)
     }
-    const handleToggle = () => {
-        
-        document.getElementById("dropdownId").classList.toggle("show")
+    const handleSunnyClick = ()=>{
+        setSunny(true)
+        console.log(sunny)
     }
-    return (
-        <div className="navbar-2">
-        <div className={styles.navbar}>
-            <div className={styles.left}>
-                Logo
-            </div>
-            <div className={styles.right}>
-                <span onClick={handleLight} id="lightModeId"><LightModeOutlinedIcon className={styles.lightMode} /></span>
-                <span onClick={handleToggle} id="toggleBtnId"><MenuOutlinedIcon className={styles.toggleBtn} /></span>
-            </div>
+    const dropdownVariants = {
+        hidden : {
+            y:'0vh',
+           
+        },
+        visible:{
+            y:0,
+            transition:{
+                
+                duration : 1
+            },
             
-        </div>
-            <div className="dropdown" id="dropdownId">
-                <div className='item'>item1</div>
-                <div className='item'>item2</div>
-                <div className='item'>item3</div>
+        }
+
+    }
+    return ( 
+        <div className={styles.navbar}>
+            <motion.div className={styles.leftNavbar}>
+                e<span className={styles.leftNavbarTitle}>Chat</span>
+            </motion.div>
+            <div className={styles.rightNavbar}>
+                <div className={styles.media}>
+                    <div className={styles.itm}>
+                        ITEM1
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM2
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM3
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM4
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM5
+                    </div>
+                    <div className={styles.itm}>
+                        ITEM6
+                    </div>
+                </div>
+                <div className={styles.icons}>
+                    <motion.div className={styles.sunny}
+                    onClick = {handleSunnyClick}
+                    whileHover = {{scale:1.3 , color : '#2c2c54',transition : {duration : .3}}}
+                    ><WbSunnyOutlinedIcon/></motion.div>
+                    <motion.div className={styles.toggle}
+                    onClick = {handleToggleClick}
+                    whileHover = {{scale:1.3 , color : '#2c2c54',transition : {duration : .2}}}
+                    ><LegendToggleOutlinedIcon/></motion.div>
+                </div>
             </div>
+            <AnimatePresence>
+            {toggle && (
+                <motion.div className={styles.dropdownComp}
+                exit = {{opacity : 0 , transition : {duration : .5}}}
+                variants = {dropdownVariants}
+                initial = "hidden"
+                animate = "visible"
+                ><Dropdown toggle = {toggle} setToggle = {setToggle}/></motion.div>
+            )}
+            
+            </AnimatePresence>
         </div>
-
-
-    );
+     );
 }
-
+ 
 export default Navbar;
