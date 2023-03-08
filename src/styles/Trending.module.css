@@ -1,6 +1,8 @@
 .trending{
     font-size: 2rem;
     background-color: #FDF6F0;
+    max-width: 96vw;
+    margin: auto;
 }
 .buttonBox{
     width: 100%;
