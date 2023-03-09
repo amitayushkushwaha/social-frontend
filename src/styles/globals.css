@@ -2,8 +2,10 @@
 :root {
     --padding-top:3%;
     --padding-bottom:5%;
-    --post-color: whitesmoke;
+    --post-color:#F5C6AA;
+    --post-icon-color:#F5C6AA;
     --post-imagesize:35px;
+    --post-background-color:#FDF6F0;
 }
 
 * {

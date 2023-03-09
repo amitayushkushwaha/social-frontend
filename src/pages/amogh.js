@@ -18,7 +18,7 @@ export default function Post1() {
       <main>
         <Navbar />
         <SuggestionBox peopleData={"data"} />
-
+        <div className={styles.posts__container} >
         <Post
           username={"Amogh"}
           hasImage={true}
@@ -26,7 +26,7 @@ export default function Post1() {
           hasLiked={false}
           ishisFriend={true}
         />
-        <button className={styles.trendingBtn} onClick={handleButton}>
+        <button className={styles.trendingBtn} onClick={handleButton} onMouseEnter={()=>{}}>
           {" "}
           Trending ../
         </button>
@@ -39,6 +39,7 @@ export default function Post1() {
           hasLiked={false}
           ishisFriend={false}
         />
+        </div>
       </main>
     </>
   );

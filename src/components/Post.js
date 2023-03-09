@@ -40,12 +40,7 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
 
       { hasImage && <Image className={styles.post__image} src={Chillies} />}
       <p className={styles.post__content}>
-        sijgipjgirej rjgoirejo eohfdddd
-        dddddddddddddddddddddddddddd
-        ddddddddddddddddddddddddddddddd
-        dddddddddddddddddddd
-        dddddddddddddddddddddddddddddddd
-        dddddddddddddddddddddddddd
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis maximus neque quis mattis. Donec posuere sem quis vulputate ultrices. Aenean ut massa consequat, ultricies magna et, aliquet dolor. Donec pulvinar tortor et nibh cursus hendrerit. Cras porta, felis id rhoncus convallis, ante ipsum tristique magna, at porta metus tellus non tellus. Mauris non eleifend metus. Nulla fringilla augue sed sollicitudin laoreet. Duis vel dapibus augue. Duis nec quam non odio mollis lacinia. Mauris quis placerat ex.
       </p>
       <div className={styles.post__icon}>
         {(isClicked &&<FavoriteIcon className={`${styles.post__icons} ${styles.post__large}`}  onClick={handleFavouriteClick}/>) || 

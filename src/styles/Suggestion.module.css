@@ -1,7 +1,7 @@
 .suggestionBox {
-    background-color: #fff;
+    background-color:var(--post-background-color);
   
-    border-radius: 5%;
+    border-radius: 10%;
     padding-top: 3%;
     padding-left: 2%;
     margin-bottom: 5%;
@@ -10,7 +10,7 @@
     margin-right: 3%;
     width: 94%;
     overflow-x: scroll; /*for horizontal schrolling */
-    box-shadow: 0 0 32px 2px var(--post-color);
+    box-shadow: 0 0 32px 2px #FCD8D4;
     overflow-y: hidden;
    
   }

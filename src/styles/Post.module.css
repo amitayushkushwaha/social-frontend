@@ -12,6 +12,12 @@
     /* <------------------------------ new styles ------------------------------------------------> */
     display: inline-block;
     text-align: center;
+    max-width: 800px;
+   background-color: var(--post-background-color);
+}
+
+.posts__container{
+    text-align: center;
 }
 
 .post__add{
@@ -43,10 +49,12 @@
 
 .post__icons{
     margin-right: 7%;
+    color: var(--post-icon-color);
 }
 
 .post__add{
     margin-left: auto;
+    color:var(--post-icon-color);
 }
 
 .post__profile__image{
@@ -60,6 +68,7 @@
     overflow-wrap: break-word;
     text-align: left;
 }
+
 
 .trendingBtn {
     position: fixed;
@@ -76,16 +85,17 @@
     color: white;
   }
 
+
 .comment__icon{
     width:auto;
 }
 
   @media (min-width: 766px) {
     .post{
-        width: calc(50% - 80px);
         border-radius: 20px;
         padding-bottom: 2.1%;
         padding-top: 1.6%;
+        box-shadow: 0 0 64px 4px var(--post-color);
     }
     .post__image{
         width: 100%;
