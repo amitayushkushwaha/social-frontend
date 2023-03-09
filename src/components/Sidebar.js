@@ -1,10 +1,10 @@
 import styles from "@/styles/Sidebar.module.css";
 import {motion , AnimatePresence} from 'framer-motion'
-const Sidebar = ({leftBar,setLeftBar}) => {
+const Sidebar = ({left,setLeft}) => {
     
     const handleCloseSidebar = ()=>{
-        setLeftBar(false)
-        console.log(leftBar)
+        setLeft(false)
+        console.log(left)
     }
     const sideBarVariants = {
         hidden:{

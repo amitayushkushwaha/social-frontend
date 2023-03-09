@@ -79,10 +79,12 @@
     padding-left: 2%;
     padding-right: 2%;
     font-size: 110%;
-    background-color: blue;
-    border: 3px solid white;
+    background-color: #ff5252;
+    border: 2px solid #ffffff;
     /* border: 3px dotted green; */
     color: white;
+    cursor: pointer;
+    
   }
 
 
@@ -128,4 +130,10 @@
         width: 40px;
     }
 }
-  
+@media screen and (max-width : 475px){
+    .trendingBtn{
+        height: 15vh;
+        width: 15vh;
+        border-radius: 50%;
+    }
+}

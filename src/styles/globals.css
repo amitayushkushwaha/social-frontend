@@ -8,6 +8,10 @@
     --post-background-color:#FDF6F0;
 }
 
+div::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   /* margin: 0;
   padding: 0; */

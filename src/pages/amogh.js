@@ -4,7 +4,7 @@ import SuggestionBox from "@/components/SuggestionBox";
 import Navbar from "@/components/Navbar";
 import styles from "@/styles/Post.module.css"
 import Router from "next/router";
-
+import {motion} from 'framer-motion';
 export default function Post1() {
   function handleButton() {
     Router.push("/aman");
@@ -26,10 +26,12 @@ export default function Post1() {
           hasLiked={false}
           ishisFriend={true}
         />
-        <button className={styles.trendingBtn} onClick={handleButton} onMouseEnter={()=>{}}>
+        <motion.button className={styles.trendingBtn} onClick={handleButton}
+        whileHover = {{scale : 1.2}}
+        >
           {" "}
-          Trending ../
-        </button>
+          Trending
+        </motion.button>
         <Post username={"Amit"} hasImage={false} postId={"i"} hasLiked={true} ishisFriend={true}/>
         <Post username={"Aman"} hasImage={true} postId={"i"} hasLiked={false} ishisFriend={true}/>
         <Post
