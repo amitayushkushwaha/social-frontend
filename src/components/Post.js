@@ -9,11 +9,14 @@ import { FavoriteBorder } from "@mui/icons-material";
 import { useState } from 'react';
 import { CommentForm } from "./CommentForm";
 import { CheckCircle } from "@mui/icons-material";
+import Comments from "./Comments";
 
 export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}) {
   const [isClicked, setIsClicked] = useState(hasLiked);
   const [isComment,setIsComment]=useState(false);
   const [isFriend , setIsFriend]=useState(ishisFriend);
+  const [areCommentsVisible,setAreCommentsVisible]=useState(false);
+  const {render,handleShowComments}=Comments( areCommentsVisible,setAreCommentsVisible);
 
   function handleFavouriteClick(){
     setIsClicked(!isClicked);
@@ -22,7 +25,8 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
   }
 
   function handleComment(){
-    setIsComment(!isComment);
+    setIsComment(!isComment)
+    
   }
 
   function handleFriend(){
@@ -31,11 +35,15 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
     ishisFriend=isFriend;
   }
 
+
+
   return (
     <div className={styles.post}>
       <div className={styles.post__cards}>
         <Image className={styles.post__profile__image} src={profile}/>
         <p className={styles.post__username}>{username}</p>
+        {(!isFriend &&<AddIcon className={`${styles.post__add} ${styles.post__large}`} onClick={handleFriend}/>) ||
+        (isFriend &&<CheckCircle className={`${styles.post__add} ${styles.post__large}`}  onClick={handleFriend}/>)}
       </div>
 
       { hasImage && <Image className={styles.post__image} src={Chillies} />}
@@ -46,10 +54,16 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
         {(isClicked &&<FavoriteIcon className={`${styles.post__icons} ${styles.post__large}`}  onClick={handleFavouriteClick}/>) || 
         (!isClicked &&<FavoriteBorder className={`${styles.post__icons} ${styles.post__large}`}  onClick={handleFavouriteClick}/>)}
         <CommentIcon className={`${styles.post__icons} ${styles.post__large}`} onClick={handleComment} />
-        {(!isFriend &&<AddIcon className={`${styles.post__add} ${styles.post__large}`} onClick={handleFriend}/>) ||
-        (isFriend &&<CheckCircle className={`${styles.post__add} ${styles.post__large}`}  onClick={handleFriend}/>)}
+        <button
+            className={styles.comment__button}
+            onClick={handleShowComments}
+          >
+            ...
+          </button>
       </div>
+      {areCommentsVisible && render}
       {isComment && <CommentForm setIsComment={setIsComment} URL={"https://............"} />}
+      
     </div>
   );
 }
