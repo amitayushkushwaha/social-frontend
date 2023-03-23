@@ -1,7 +1,7 @@
 .suggestionBox {
-    background-color: #fff;
+    background-color:var(--post-background-color);
   
-    border-radius: 5%;
+    border-radius: 10%;
     padding-top: 3%;
     padding-left: 2%;
     margin-bottom: 5%;
@@ -9,11 +9,13 @@
     margin-left: 3%;
     margin-right: 3%;
     width: 94%;
-    overflow-x: scroll; /*for horizontal schrolling */
-    box-shadow: 0 0 32px 2px var(--post-color);
+
+    box-shadow: 0 0 32px 2px #FCD8D4;
     overflow-y: hidden;
    
   }
+
+  
   
   .title {
     color: #000;
@@ -28,6 +30,9 @@
    /* flex-wrap: wrap;*/ /* To make items go in next line */ 
     justify-content: space-between; /* To generate space between images */
      white-space: nowrap;
+     overflow-x: auto; /*for horizontal schrolling */
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
   }
   
   .person {
@@ -41,6 +46,7 @@
     border-radius: 50%;
     height: 64px;
     width: 64px;
+    object-fit: cover;
   }
   
   .personName {

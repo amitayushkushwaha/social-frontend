@@ -2,13 +2,19 @@
 :root {
     --padding-top:3%;
     --padding-bottom:5%;
-    --post-color: whitesmoke;
+    --post-color:#F5C6AA;
+    --post-icon-color:#F5C6AA;
     --post-imagesize:35px;
+    --post-background-color:#FDF6F0;
+}
+
+div::-webkit-scrollbar {
+  display: none;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   box-sizing: border-box;
 }
 
