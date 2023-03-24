@@ -3,23 +3,22 @@ import commentProfileImage from "assets/images/profileimage3.jpg";
 import Image from "next/image";
 import styles from "@/styles/comments.module.css";
 import { useState } from "react";
-export default function Comments(areCommentsVisible,setAreCommentsVisible) {
+export default function Comments({areCommentsVisible,setAreCommentsVisible}) {
   const [comments, setComments] = useState(null);
   const [commentCount, setCommentCount] = useState(4);
   
   const handleShowComments=()=> {
     setCommentCount(4);
     setAreCommentsVisible(!areCommentsVisible)
-    console.log(commentCount);
     let tempComments = [];
     for (var i = 0; i < commentCount - 1; ++i) {
       tempComments.push(
-        <div className={styles.comment__div}>
+        <div className={styles.comment__div} key={i}>
           <div className={styles.userInfo}>
             <Image
-              className={styles.avatar}
+              // className={styles.avatar}
               src={commentProfileImage}
-              alt="Avatar"
+              alt="Profile Image"
             />
             <span className={styles.username}>Amogh Tiwari</span>
           </div>
