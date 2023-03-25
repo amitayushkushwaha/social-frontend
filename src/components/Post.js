@@ -40,13 +40,13 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
   return (
     <div className={styles.post}>
       <div className={styles.post__cards}>
-        <Image className={styles.post__profile__image} src={profile} alt="Profile Image"/>
+        <Image  src={profile} alt="Profile Image"/>
         <p className={styles.post__username}>{username}</p>
         {(!isFriend &&<AddIcon className={`${styles.post__add} ${styles.post__large}`} onClick={handleFriend}/>) ||
         (isFriend &&<CheckCircle className={`${styles.post__add} ${styles.post__large}`}  onClick={handleFriend}/>)}
       </div>
 
-      { hasImage && <Image className={styles.post__image} src={Chillies} alt="Post Image"/>}
+      { hasImage && <Image  src={Chillies} alt="Post Image"/>}
       <p className={styles.post__content}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis maximus neque quis mattis. Donec posuere sem quis vulputate ultrices. Aenean ut massa consequat, ultricies magna et, aliquet dolor. Donec pulvinar tortor et nibh cursus hendrerit. Cras porta, felis id rhoncus convallis, ante ipsum tristique magna, at porta metus tellus non tellus. Mauris non eleifend metus. Nulla fringilla augue sed sollicitudin laoreet. Duis vel dapibus augue. Duis nec quam non odio mollis lacinia. Mauris quis placerat ex.
       </p>
@@ -61,8 +61,9 @@ export default function Post({ username, postId, hasImage ,hasLiked,ishisFriend}
             ...
           </button>
       </div>
-      {areCommentsVisible && render}
       {isComment && <CommentForm setIsComment={setIsComment} URL={"https://............"} />}
+      {areCommentsVisible && render}
+      
       
     </div>
   );
