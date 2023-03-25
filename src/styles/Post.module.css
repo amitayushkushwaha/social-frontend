@@ -24,7 +24,7 @@
     text-align: right;
 }
 
-.post__image{
+.post > img{
     width: 100%;
     height: auto;
 }
@@ -67,7 +67,7 @@
     color:var(--post-icon-color);
 }
 
-.post__profile__image{
+.post__cards > img{
   border-radius: 50%;
   object-fit: cover;
   width: var(--post-imagesize) ; /* set the width of the image */
@@ -109,7 +109,7 @@
         padding-top: 1.6%;
         box-shadow: 0 0 64px 4px var(--post-color);
     }
-    .post__image{
+    .post > img{
         width: 100%;
         height: auto;
     }
@@ -123,7 +123,7 @@
         font-size: 2rem;
     }
 
-    .post__profile__image{
+    .post__cards > img{
         height: 70px;
         width: 70px;
     }

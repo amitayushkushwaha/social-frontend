@@ -42,7 +42,7 @@
     margin: 8px;
   }
   
-  .personImage {
+  .person > img {
     border-radius: 50%;
     height: 64px;
     width: 64px;
@@ -56,7 +56,7 @@
   }
 
   @media (min-width:1000px){
-    .personImage{
+    .person > img{
       height: 150px;
       width: 150px;
     }
