@@ -48,7 +48,6 @@
 }
 
 .post__icons{
-    margin-right: 7%;
     color: var(--post-icon-color);
 }
 
@@ -70,6 +69,7 @@
 .post__cards > img{
   border-radius: 50%;
   object-fit: cover;
+  margin-bottom: 3%;
   width: var(--post-imagesize) ; /* set the width of the image */
   height: var(--post-imagesize) ; /* set the height of the image */
 }
@@ -77,6 +77,7 @@
 .post__content{
     overflow-wrap: break-word;
     text-align: left;
+    padding: 3% 0 3% 0;
 }
 
 

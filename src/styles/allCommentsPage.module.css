@@ -6,6 +6,7 @@
     margin-bottom: 5%;
     margin-left: 3%;
     margin-right:3%;
+    margin-top: 3%;
     border-radius: 2%;
     box-shadow: 0 0 32px 2px var(--post-color);
     display: inline-block;
@@ -27,14 +28,14 @@
 .post__username{
     
     padding-left: 5%;
-    /* padding-top: 2%; */
-    font: 1em sans-serif;
+    font: 1em ;
 }
 
 .post__cards{
     display: flex;
     align-items: center;
     border: thin;
+    padding-bottom: 3%;
 }
 
 .post__cards > img{
@@ -47,6 +48,7 @@
   .post__content{
       overflow-wrap: break-word;
       text-align: left;
+      padding: 3% 0 3% 0;
   }
 
 
@@ -118,12 +120,6 @@
     max-width: 800px;
     text-align: center;
     display: inline-block;
-    /* margin: auto; */
-    /* padding-top: 3%;
-    padding-bottom: 5%;
-    padding-left: 3%;
-    padding-right:3%; */
-    /* margin-bottom: 5%; */
     margin-left: 3%;
     margin-right:3%;
 }

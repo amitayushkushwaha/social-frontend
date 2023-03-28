@@ -1,5 +1,4 @@
 .trending{
-    font-size: 2rem;
     background-color: #FDF6F0;
     max-width: 96vw;
     margin: auto;
@@ -32,30 +31,76 @@
     /* box-shadow: 5px 5px 30px #ff3838; */
   }
 .contentBox{
-    width: 100%;
-    height: 10rem;
     border: none;
-    background: #F5C6AA;
+    border-radius: 2%;
+    box-shadow: 0 0 32px 2px var(--post-color);
     border-radius: 8px; 
+    padding: 3%;
+    margin: 2%;
+    display: flex;
+    position: relative;
+    
+}
+
+.topic_name{
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-size: 5vw;
+  color: #FDF6F0;
+}
+
+.contentBox > img{
+   
+    height: auto;
+    max-height: 230px;
+    width: 100%;
+    filter: blur(5px);
+    object-fit: cover;
 }
 .content{
-    margin-top: 1rem;
+    margin: 0 0 5% 0;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
     column-gap: 10px;
     row-gap: 10px;
+    
 }
 .posts{
     background-color: #FDF6F0;
-    height: 50vh;
+}
+
+.topic{
+    padding-bottom: 5%;
+    padding-top: 1%;
+   font-size: 1.5rem;
+   font-size: 3vw;
+}
+
+.posts_container{
+    text-align: center;
 }
 @media screen and (max-width : 475px){
     .content{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     .trendingBtn{
         height: 15vh;
         width: 15vh;
         border-radius: 50%;
+    }
+
+    .topic_name{
+        font-size: 2rem;
+    }
+
+    .contentBox{
+        max-height: 150px;
+    }
+
+    .topic{
+        font-size: 1.7rem;
     }
 }

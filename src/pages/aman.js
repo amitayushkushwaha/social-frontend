@@ -15,7 +15,7 @@ export default function trending() {
       <main>
         <Navbar/>
         
-        <Topbar />
+        {/* <Topbar /> */}
         <Trending />
         
       </main>
