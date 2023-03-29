@@ -1,11 +1,10 @@
-
 :root {
-    --padding-top:3%;
-    --padding-bottom:5%;
-    --post-color:#F5C6AA;
-    --post-icon-color:#F5C6AA;
-    --post-imagesize:35px;
-    --post-background-color:#FDF6F0;
+  --padding-top: 3%;
+  --padding-bottom: 5%;
+  --post-color: #f5c6aa;
+  --post-icon-color: #f5c6aa;
+  --post-imagesize: 35px;
+  --post-background-color: #fdf6f0;
 }
 
 div::-webkit-scrollbar {
@@ -19,3 +18,6 @@ div::-webkit-scrollbar {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.bodyContainer {
+  padding: 1rem;
+}

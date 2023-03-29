@@ -58,26 +58,26 @@
     margin: 4px 0 0;
   }
 
-  @media (min-width:1000px){
-    .person > img{
-      height: 150px;
-      width: 150px;
-    }
-
-    .personName{
-      font-size: 20px;
-    }
-
-    .person{
-      margin-left:80px;
-    }
-
-    .title{
-      font-size: 30px;
-    }
-
-    .suggestionBox{
-      border-radius: 20px;
-    }
+/* 
+@media (min-width: 1000px) {
+  .person > img {
+    height: 150px;
+    width: 150px;
   }
-  
+
+  .personName {
+    font-size: 20px;
+  }
+
+  .person {
+    margin-left: 80px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .suggestionBox {
+    border-radius: 20px;
+  }
+} */
