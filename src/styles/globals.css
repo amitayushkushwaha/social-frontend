@@ -1,14 +1,23 @@
-
 :root {
-    --padding-top:3%;
-    --padding-bottom:5%;
-    --post-color: whitesmoke;
-    --post-imagesize:35px;
+  --padding-top: 3%;
+  --padding-bottom: 5%;
+  --post-color: #f5c6aa;
+  --post-icon-color: #f5c6aa;
+  --post-imagesize: 35px;
+  --post-background-color: #fdf6f0;
+}
+
+div::-webkit-scrollbar {
+  display: none;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.bodyContainer {
+  padding: 1rem;
+}
