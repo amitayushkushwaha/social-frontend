@@ -41,7 +41,7 @@ import avatar from "./../../assets/images/avatar.jpg";
 
 export default function Dashboard() {
   return (
-    <>
+    <div>
       <Head>
         <title>Social Media/Amit</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,13 +49,13 @@ export default function Dashboard() {
       <main>
         <div className={styles.dashboardContainer}>
           <div className={styles.dashboardHeader}>
-            <span className={styles.headerIcon}>
-              <Image src={avatar} fill style={{ objectFit: "cover" }} alt="avatar"/>
-            </span>
-            <span className={styles.headerContent}>
+            <div className={styles.headerIcon}>
+              <img src={avatar.src} fill style={{ objectFit: "cover" }} alt="avatar"/>
+            </div>
+            <div className={styles.headerContent}>
               <h4>{accounts.userName}</h4>
               <p className={styles.dashboardemail}>{accounts.email}</p>
-            </span>
+            </div>
           </div>
 
           <div className={styles.dashboardOptions}>
@@ -74,6 +74,6 @@ export default function Dashboard() {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
