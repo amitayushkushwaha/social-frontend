@@ -2,11 +2,11 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Dashboard.module.css";
-
+import { accounts } from "@/pages/change_Info";
 // Icons
 import PersonIcon from "@mui/icons-material/Person";
 import ShieldIcon from "@mui/icons-material/Shield";
-import GroupIcon from "@mui/icons-material/Group";
+import LogoutIcon from "@mui/icons-material/Logout";
 import InfoIcon from "@mui/icons-material/Info";
 
 const IconsData = [
@@ -24,15 +24,15 @@ const IconsData = [
   },
   {
     id: 3,
-    title: "Friends",
-    icon: <GroupIcon />,
-    link: "/friends",
-  },
-  {
-    id: 4,
     title: "About",
     icon: <InfoIcon />,
     link: "/about",
+  },
+  {
+    id: 4,
+    title: "Logout",
+    icon: <LogoutIcon />,
+    link: "/",
   },
 ];
 
@@ -41,7 +41,7 @@ import avatar from "./../../assets/images/avatar.jpg";
 
 export default function Dashboard() {
   return (
-    <>
+    <div>
       <Head>
         <title>Social Media/Amit</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,13 +49,13 @@ export default function Dashboard() {
       <main>
         <div className={styles.dashboardContainer}>
           <div className={styles.dashboardHeader}>
-            <span className={styles.headerIcon}>
-              <Image src={avatar} fill style={{ objectFit: "cover" }} />
-            </span>
-            <span className={styles.headerContent}>
-              <h4>Amit Kushwaha</h4>
-              <p className={styles.para}>amit.kushwaha@iitg.ac.in</p>
-            </span>
+            <div className={styles.headerIcon}>
+              <img src={avatar.src} fill style={{ objectFit: "cover" }} alt="avatar"/>
+            </div>
+            <div className={styles.headerContent}>
+              <h4>{accounts.userName}</h4>
+              <p className={styles.dashboardemail}>{accounts.email}</p>
+            </div>
           </div>
 
           <div className={styles.dashboardOptions}>
@@ -74,6 +74,6 @@ export default function Dashboard() {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
