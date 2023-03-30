@@ -2,9 +2,9 @@ import Head from "next/head";
 import Post from "@/components/Post";
 import SuggestionBox from "@/components/SuggestionBox";
 import Navbar from "@/components/Navbar";
-import styles from "@/styles/Post.module.css";
+import styles from "@/styles/Post.module.css"
 import Router from "next/router";
-import { motion } from "framer-motion";
+import {motion} from 'framer-motion';
 export default function Post1() {
   function handleButton() {
     Router.push("/aman");
@@ -17,38 +17,30 @@ export default function Post1() {
       </Head>
       <main>
         <Navbar />
-        <div className="bodyContainer">
-          <SuggestionBox peopleData={"data"} />
-          <div className={styles.posts__container}>
-            <Post
-              username={"Amogh"}
-              hasImage={true}
-              postId={"i"}
-              hasLiked={false}
-              ishisFriend={true}
-            />
-            <Post
-              username={"Amit"}
-              hasImage={false}
-              postId={"i"}
-              hasLiked={true}
-              ishisFriend={true}
-            />
-            <Post
-              username={"Aman"}
-              hasImage={true}
-              postId={"i"}
-              hasLiked={false}
-              ishisFriend={true}
-            />
-            <Post
-              username={"Nishant"}
-              hasImage={true}
-              postId={"i"}
-              hasLiked={false}
-              ishisFriend={false}
-            />
-          </div>
+        <SuggestionBox peopleData={"data"} />
+        <div className={styles.posts__container} >
+        <Post
+          username={"Amogh"}
+          hasImage={true}
+          postId={"i"}
+          hasLiked={false}
+          ishisFriend={true}
+        />
+        <motion.button className={styles.trendingBtn} onClick={handleButton}
+        whileHover = {{scale : 1.2}}
+        >
+          {" "}
+          Trending
+        </motion.button>
+        <Post username={"Amit"} hasImage={false} postId={"i"} hasLiked={true} ishisFriend={true}/>
+        <Post username={"Aman"} hasImage={true} postId={"i"} hasLiked={false} ishisFriend={true}/>
+        <Post
+          username={"Nishant"}
+          hasImage={true}
+          postId={"i"}
+          hasLiked={false}
+          ishisFriend={false}
+        />
         </div>
       </main>
     </>
