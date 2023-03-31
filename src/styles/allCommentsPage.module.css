@@ -1,68 +1,92 @@
-.container {
+.post{
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 3%;
+  padding-right:3%;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right:3%;
+  margin-top: 3%;
+  border-radius: 2%;
+  box-shadow: 0 0 32px 2px var(--post-color);
+  display: inline-block;
   text-align: center;
-  background-color: var(--post-background-color);
-  padding: 1rem;
+  max-width: 800px;
+ background-color: var(--post-background-color);
 }
 
-.post > img {
+.container{
+  text-align: center;
+  background-color: var(--post-background-color);
+}
+
+.post > img{
   width: 100%;
   height: auto;
 }
 
-.post__username {
+.post__username{
+  
   padding-left: 5%;
-  /* padding-top: 2%; */
-  font: 1em sans-serif;
+  font: 1em ;
 }
 
-.post__cards {
+.post__cards{
   display: flex;
   align-items: center;
   border: thin;
+  padding-bottom: 3%;
 }
 
-.post__cards > img {
+.post__cards > img{
   border-radius: 50%;
   object-fit: cover;
-  width: var(--post-imagesize); /* set the width of the image */
-  height: var(--post-imagesize); /* set the height of the image */
+  width: var(--post-imagesize) ; /* set the width of the image */
+  height: var(--post-imagesize) ; /* set the height of the image */
 }
 
-.post__content {
-  overflow-wrap: break-word;
-  text-align: left;
+.post__content{
+    overflow-wrap: break-word;
+    text-align: left;
+    padding: 3% 0 3% 0;
 }
+
+
 
 @media (min-width: 766px) {
-  .post {
-    border-radius: 20px;
-    padding-bottom: 2.1%;
-    padding-top: 1.6%;
-    box-shadow: 0 0 64px 4px var(--post-color);
+  .post{
+      border-radius: 20px;
+      padding-bottom: 2.1%;
+      padding-top: 1.6%;
+      box-shadow: 0 0 64px 4px var(--post-color);
   }
-  .post > img {
-    width: 100%;
-    height: auto;
-  }
-
-  .post__username {
-    font-size: 2rem;
+  .post > img{
+      width: 100%;
+      height: auto;
   }
 
-  .post__cards > img {
-    height: 70px;
-    width: 70px;
+  .post__username{
+      font-size: 2rem;
+  }
+
+  .post__cards > img{
+      height: 70px;
+      width: 70px;
+  }
+
+  
+}
+
+@media (min-width:900px){
+  .post__content{
+      font-size: 130%;
   }
 }
 
-@media (min-width: 900px) {
-  .post__content {
-    font-size: 130%;
-  }
-}
+
 
 /*  <---------------------------------------------- styles for comments ------------------------------------------------------------>  */
-.comment__name {
+.comment__name{
   color: var(--post-icon-color);
   text-align: left;
   margin: 0;
@@ -91,9 +115,16 @@
   margin-right: 10px;
 }
 
-.comment__container {
+.comment__container{
   border-radius: 30px;
+  max-width: 800px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 3%;
+  margin-right:3%;
 }
+
+
 
 .userInfo > img {
   width: 50px;
@@ -126,10 +157,12 @@
   }
 
   .comment__div {
+  
     border-radius: 5px;
   }
+  
 
-  .commentContent {
-    font-size: 2.5vw;
+  .commentContent{
+      font-size: 2.5vw;
   }
 }

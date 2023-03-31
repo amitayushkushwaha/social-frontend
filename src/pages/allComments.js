@@ -14,7 +14,7 @@ export default function allComments() {
 
   for (var i = 0; i < commentCount; ++i) {
     comments.push(
-      <div className={styles.comment__div}>
+      <div className={styles.comment__div} key={i} >
         <div className={styles.userInfo}>
           <Image src={commentProfileImage} alt={"Profile Image"} />
           <span className={styles.username}>Amogh Tiwari</span>

@@ -12,10 +12,8 @@ export default function Comments({
   const [commentCount, setCommentCount] = useState(4);
 
   const handleShowComments = ()=>{
-    setCommentCount(4);
-    setAreCommentsVisible(!areCommentsVisible);
     let tempComments = [];
-    for (var i = 0; i < commentCount - 1; ++i) {
+    for (var i = 0; i < commentCount-1; ++i) {
       tempComments.push(
         <div className={styles.comment__div} key={i}>
           <div className={styles.userInfo}>
