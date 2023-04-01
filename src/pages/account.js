@@ -4,11 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import ReactDOM from "react-dom";
 import { accounts } from "./change_Info";
+import Navbar from "@/components/Navbar";
 
 function Account() {
   // console.log(avatar)
 
   return (
+    <div>
+       <Navbar/>
+    
+   
     <div className={styles.account}>
       <figure>
         <img
@@ -29,6 +34,7 @@ function Account() {
           <h4>Change Info</h4>
         </a>
       </Link>
+    </div>
     </div>
   );
 }

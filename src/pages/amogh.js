@@ -42,6 +42,7 @@ export default function Post1() {
           ishisFriend={false}
         />
         </div>
+        <div className={styles.spacer}/>
       </main>
     </>
   );

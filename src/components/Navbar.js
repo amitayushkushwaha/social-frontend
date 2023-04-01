@@ -2,10 +2,13 @@ import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import LegendToggleOutlinedIcon from "@mui/icons-material/LegendToggleOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import styles from "@/styles/Navbar.module.css";
+import linkstyle from "@/styles/dropdown.module.css"
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Dropdown from "./Dropdown";
 import Sidebar from "./Sidebar";
+import Link from "next/link";
+import { CircleNotifications } from "@mui/icons-material";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -66,14 +69,20 @@ const Navbar = () => {
       {/* Right Navbar */}
       <div className={styles.rightNavbar}>
         <div className={styles.media}>
-          <div className={styles.itm}>ITEM1</div>
-          <div className={styles.itm}>ITEM2</div>
+          <Link href="/amit"  className={linkstyle.link}>
+          <div className={styles.itm}>DashBoard</div>
+          </Link>
+          <Link href="/profile"  className={linkstyle.link} >
+            <div className={styles.itm}>Profile</div>
+          </Link>
+          
           <div className={styles.itm}>ITEM3</div>
           <div className={styles.itm}>ITEM4</div>
           <div className={styles.itm}>ITEM5</div>
           <div className={styles.itm}>ITEM6</div>
         </div>
         <div className={styles.icons}>
+          <Link href="/notifications"><CircleNotifications/></Link>
           <motion.div
             className={styles.sunny}
             onClick={handleSunnyClick}

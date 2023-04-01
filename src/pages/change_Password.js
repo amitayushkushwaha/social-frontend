@@ -1,8 +1,10 @@
+import Navbar from "@/components/Navbar";
 import styles from "@/styles/Dashboard.module.css";
 import Link from "next/link";
 export default function Change_Password() {
   return (
     <>
+    <Navbar/>
      <form className={styles.change_password}>
       <input type="password" placeholder="Current_password"  autocomplete="off" />
       <input type="password" placeholder="New_Password"  autocomplete="off" />
