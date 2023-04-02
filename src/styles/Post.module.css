@@ -40,6 +40,7 @@
   display: flex;
   align-items: center;
   border: thin;
+  margin-bottom: 3%;
 }
 
 .post__icon{
@@ -69,7 +70,7 @@
 .post__cards > img{
 border-radius: 50%;
 object-fit: cover;
-margin-bottom: 3%;
+/* margin-bottom: 3%; */
 width: var(--post-imagesize) ; /* set the width of the image */
 height: var(--post-imagesize) ; /* set the height of the image */
 }
@@ -101,6 +102,10 @@ height: var(--post-imagesize) ; /* set the height of the image */
 
 .comment__icon{
   width:auto;
+}
+
+.spacer{
+  height: 60px;
 }
 
 @media (min-width: 766px) {

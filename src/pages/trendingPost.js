@@ -2,6 +2,7 @@ import Head from "next/head";
 import Post from "@/components/Post";
 import { topic } from "@/components/Trending";
 import styles from "@/styles/allTrendingPosts.module.css"
+import Navbar from "@/components/Navbar";
 export default function trendingPost() {
     const posts=[];
 
@@ -21,6 +22,7 @@ export default function trendingPost() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
+        <Navbar/>
        <h2 className={styles.heading} >{topic}</h2>
        <div className={styles.postsContainer}>
        {posts}

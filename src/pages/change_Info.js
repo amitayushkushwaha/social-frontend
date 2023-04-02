@@ -1,6 +1,7 @@
 import styles from "@/styles/Dashboard.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 var accounts = {
   userName: "@amit_maurya",
   email: "amitmaurya@gmail.com",
@@ -21,6 +22,7 @@ function Change_Info() {
 
   return (
     <div>
+      <Navbar/>
       <form className={styles.change_info} onChange={Update_Contact}>
         <input
           type="text"

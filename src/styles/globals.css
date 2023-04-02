@@ -5,6 +5,7 @@
   --post-icon-color: #f5c6aa;
   --post-imagesize: 35px;
   --post-background-color: #fdf6f0;
+  --icon-color:#ff5252
 }
 
 div::-webkit-scrollbar {
@@ -20,4 +21,17 @@ div::-webkit-scrollbar {
 
 .bodyContainer {
   padding: 1rem;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit; /* text color on hover */
+}
+
+a:visited {
+  color: inherit; /* text color on visited */
 }

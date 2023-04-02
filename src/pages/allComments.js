@@ -5,6 +5,8 @@ import Image from "next/image";
 import Head from "next/head";
 import Chillies from "assets/images/background.jpg";
 import profile from "assets/images/profileimage5.jpg";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function allComments() {
   // get the comment count
@@ -17,7 +19,9 @@ export default function allComments() {
       <div className={styles.comment__div} key={i} >
         <div className={styles.userInfo}>
           <Image src={commentProfileImage} alt={"Profile Image"} />
+          <Link href="/profile">
           <span className={styles.username}>Amogh Tiwari</span>
+          </Link>
         </div>
         <p className={styles.commentContent}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -37,6 +41,7 @@ export default function allComments() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
+        <Navbar/>
         <div className={styles.container}>
           <div className={styles.post}>
             <div className={styles.post__cards}>
@@ -45,7 +50,7 @@ export default function allComments() {
                 src={profile}
                 alt="Profile Image"
               />
-              <p className={styles.post__username}>{"Amogh Tiwari"}</p>
+              <p className={styles.post__username}> <Link href="/profile">  {"Amogh Tiwari"} </Link></p>
             </div>
 
             {true && (
