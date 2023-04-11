@@ -2,7 +2,7 @@ import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import LegendToggleOutlinedIcon from "@mui/icons-material/LegendToggleOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import styles from "@/styles/Navbar.module.css";
-import linkstyle from "@/styles/dropdown.module.css"
+import linkstyle from "@/styles/Dropdown.module.css"
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Dropdown from "./Dropdown";

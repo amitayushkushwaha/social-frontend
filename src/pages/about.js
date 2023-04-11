@@ -1,8 +1,12 @@
 import styles from "@/styles/Dashboard.module.css";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+import BackButton from "@/components/BackButton";
 export default function About() {
   return (
     <div className={styles.about}>
+      <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+        <BackButton/>
+        </div>
       <div className={styles.about_header}>
         <h1>About Us</h1>
         <i>

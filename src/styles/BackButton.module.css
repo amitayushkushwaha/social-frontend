@@ -1,0 +1,15 @@
+.back_button{
+    color:#fff;
+    background-color: var(--icon-color);
+    opacity:0.8;
+    transition: 0.4s ease-in-out;
+    margin-right: 5%;
+}
+
+.back_button:hover{
+    opacity: 1;
+    color:var(--icon-color);
+    background-color: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+}

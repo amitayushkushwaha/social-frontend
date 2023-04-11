@@ -7,6 +7,7 @@ import Chillies from "assets/images/background.jpg";
 import profile from "assets/images/profileimage5.jpg";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import BackButton from "@/components/BackButton";
 
 export default function allComments() {
   // get the comment count
@@ -42,6 +43,10 @@ export default function allComments() {
       </Head>
       <main>
         <Navbar/>
+        <div style={{paddingTop:"3%",paddingLeft:"7%",backgroundColor:"var(--post-background-color)"}} >
+        <BackButton/>
+        </div>
+       
         <div className={styles.container}>
           <div className={styles.post}>
             <div className={styles.post__cards}>

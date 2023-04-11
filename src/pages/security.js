@@ -2,9 +2,13 @@ import Change_Password from "./change_Password";
 import styles from "@/styles/Dashboard.module.css";
 import Link from "next/link";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
+import BackButton from "@/components/BackButton";
 export default function Security() {
   return (
     <div className={styles.security}>
+      <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+        <BackButton/>
+        </div>
       <i>
         <LockOpenIcon />
       </i>
