@@ -4,6 +4,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import avatar from "@/../assets/images/avatar.jpg";
 import Link from "next/link";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import BackButton from "@/components/BackButton";
 import { useState } from "react";
 var profile_follower = [
   {
@@ -28,6 +29,9 @@ export default function Profile() {
 
   return (
     <div className={styles.profile}>
+      <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+        <BackButton/>
+        </div>
       <div className={styles.profile_upper}>
         <div className={styles.profile_header}>
           <i>

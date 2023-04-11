@@ -5,6 +5,7 @@ import Link from "next/link";
 import ReactDOM from "react-dom";
 import { accounts } from "./change_Info";
 import Navbar from "@/components/Navbar";
+import BackButton from "@/components/BackButton";
 
 function Account() {
   // console.log(avatar)
@@ -12,7 +13,9 @@ function Account() {
   return (
     <div>
        <Navbar/>
-    
+       <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+        <BackButton/>
+        </div>
    
     <div className={styles.account}>
       <figure>

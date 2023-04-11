@@ -2,6 +2,7 @@ import Head from "next/head";
 import Message from "@/components/message";
 import styles from "@/styles/message.module.css"
 import Navbar from "@/components/Navbar";
+import BackButton from "@/components/BackButton";
 export default function Notifications() {
     
     const messages=[];
@@ -23,7 +24,7 @@ export default function Notifications() {
       <main>
         <Navbar/>
         <div className={styles.allMessageContainer}>
-            <p className={styles.heading}>messages</p>
+            <p className={styles.heading}> <BackButton/> messages</p>
             {messages}
         </div>
         

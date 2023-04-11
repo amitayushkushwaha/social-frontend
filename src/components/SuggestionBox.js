@@ -9,8 +9,8 @@ const SuggestionBox = ({ peopleData }) => {
 
   for(var i=0;i<16;++i){
     people.push(
-      <Link href={"/profile"}>
-        <div  className={styles.person } key={i} >
+      <Link href={"/profile"} key={i} >
+        <div  className={styles.person }  >
             <Image src={person1}  alt={"Amogh"}/>
             <p className={styles.personName}>{"Amogh"}</p>
           </div>

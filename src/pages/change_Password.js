@@ -1,10 +1,14 @@
 import Navbar from "@/components/Navbar";
 import styles from "@/styles/Dashboard.module.css";
 import Link from "next/link";
+import BackButton from "@/components/BackButton";
 export default function Change_Password() {
   return (
     <>
     <Navbar/>
+    <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+        <BackButton/>
+        </div>
      <form className={styles.change_password}>
       <input type="password" placeholder="Current_password"  autocomplete="off" />
       <input type="password" placeholder="New_Password"  autocomplete="off" />
