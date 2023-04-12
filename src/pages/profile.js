@@ -5,6 +5,8 @@ import avatar from "@/../assets/images/avatar.jpg";
 import Link from "next/link";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { useState } from "react";
+import { accounts } from "./change_Info";
+
 var profile_follower = [
   {
     name: "Following",
@@ -37,7 +39,7 @@ export default function Profile() {
               </a>
             </Link>
           </i>
-          <h2>Amit Maurya</h2>
+          <h2>{accounts.userName}</h2>
           <i>
             <FlareIcon />
           </i>
@@ -51,7 +53,7 @@ export default function Profile() {
               style={{ objectFit: "cover" }}
             />
             <figcaption>
-              <h3>@Amit_Maurya</h3>
+              <h3>{accounts.userName}</h3>
             </figcaption>
           </figure>
         </div>
