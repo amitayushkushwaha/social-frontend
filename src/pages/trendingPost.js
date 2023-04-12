@@ -4,6 +4,7 @@ import { topic } from "@/components/Trending";
 import styles from "@/styles/allTrendingPosts.module.css";
 import Navbar from "@/components/Navbar";
 import BackButton from "@/components/BackButton";
+import CreateButton from "@/components/createButton";
 export default function trendingPost() {
   const posts = [];
 
@@ -28,6 +29,7 @@ export default function trendingPost() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
+        <CreateButton/>
         <Navbar />
         <div className={styles.heading}>
           <div className={styles.button}>

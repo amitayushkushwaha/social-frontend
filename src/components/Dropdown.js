@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 const Dropdown = ({ toggle, setToggle }) => {
 
-  const data=["Profile","Dashboard"];
-  const links=["/profile","/amit"];
+  const data=["Profile","Dashboard","Logout","Home"];
+  const links=["/profile","/amit","/","/amogh"];
 
   const dropdowns=[];
 
-  for(var i=0;i<2;++i){
+  for(var i=0;i<data.length;++i){
     dropdowns.push(
       <Link className={styles.link} href={links[i]}> 
     <motion.div

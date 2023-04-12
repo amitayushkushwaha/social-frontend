@@ -51,7 +51,6 @@ export default function Profile() {
             <img
               src={avatar.src}
               alt="profile"
-              fill
               style={{ objectFit: "cover" }}
             />
             <figcaption>
