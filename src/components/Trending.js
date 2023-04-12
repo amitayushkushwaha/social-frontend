@@ -1,27 +1,10 @@
 import styles from "@/styles/Trending.module.css";
-import { motion } from "framer-motion";
 import trendingImage from "assets/images/profileimage2.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import Post from "./Post";
 let topic = "";
 const Trending = () => {
-  const buttonHover = {
-    hover: {
-      scale: 1.2,
-      backgroundColor: "#ff5252",
-    },
-    hidden: {
-      x: "100vw",
-    },
-    visible: {
-      x: 0,
-      transition: {
-        type: "spring",
-        duration: 1,
-      },
-    },
-  };
   const posts = [];
 
   for (var i = 0; i < 15; ++i) {
@@ -53,89 +36,40 @@ const Trending = () => {
     }
   };
 
-  const leftVariants = {
-    hidden: { 
-      x: "0"
-  },
-    visible: {
-      x: 0,
-      transition: {
-        duration:1,
-        delay: 1,
-      },
-    },
-  };
-  const rightVariants = {
-    hidden: {
-      x: "0"
-    },
-    visible: {
-      x: 0,
-      transition: {
-        duration: 1,
-        delay: 1,
-      },
-    },
-  };
-
   return (
     <div className={styles.trending}>
       <div className={styles.topic}>#topics</div>
       <div className={styles.content}>
         <Link href="/trendingPost" legacyBehavior>
           <a>
-            <motion.div
-              className={styles.contentBox}
-              variants={leftVariants}
-              initial="hidden"
-              animate="visible"
-              onClick={handleClick}
-            >
+            <div className={styles.contentBox}>
               <Image src={trendingImage} alt={"Image"} />
               <h2 className={styles.topic_name}>Dance</h2>
-            </motion.div>
+            </div>
           </a>
         </Link>
         <Link href="/trendingPost" legacyBehavior>
           <a>
-            <motion.div
-              className={styles.contentBox}
-              variants={rightVariants}
-              initial="hidden"
-              animate="visible"
-              onClick={handleClick}
-            >
+            <div className={styles.contentBox}>
               <Image src={trendingImage} alt={"Image"} />
               <h2 className={styles.topic_name}>Music</h2>
-            </motion.div>
+            </div>
           </a>
         </Link>
         <Link href="/trendingPost" legacyBehavior>
           <a>
-            <motion.div
-              className={styles.contentBox}
-              variants={leftVariants}
-              initial="hidden"
-              animate="visible"
-              onClick={handleClick}
-            >
+            <div className={styles.contentBox}>
               <Image src={trendingImage} alt={"Image"} />
               <h2 className={styles.topic_name}>Sports</h2>
-            </motion.div>
+            </div>
           </a>
         </Link>
         <Link href="/trendingPost" legacyBehavior>
           <a>
-            <motion.div
-              className={styles.contentBox}
-              variants={rightVariants}
-              initial="hidden"
-              animate="visible"
-              onClick={handleClick}
-            >
+            <div className={styles.contentBox} onClick={handleClick}>
               <Image src={trendingImage} alt={"Image"} />
               <h2 className={styles.topic_name}>Topic</h2>
-            </motion.div>
+            </div>
           </a>
         </Link>
       </div>
@@ -146,8 +80,6 @@ const Trending = () => {
       </div>
     </div>
   );
-
-  
 };
 
 export default Trending;

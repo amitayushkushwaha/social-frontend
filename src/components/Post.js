@@ -55,9 +55,12 @@ export default function Post({
     <div className={styles.post}>
       <div className={styles.post__cards}>
         <Image src={profile} alt="Profile Image" />
-       
-        <p className={styles.post__username}> <Link href="/profile"> {username}</Link></p>
-       
+
+        <p className={styles.post__username}>
+          {" "}
+          <Link href="/profile"> {username}</Link>
+        </p>
+
         {(!isFriend && (
           <AddIcon
             className={`${styles.post__add} ${styles.post__large}`}
@@ -71,17 +74,11 @@ export default function Post({
             />
           ))}
       </div>
-
       {hasImage && <Image src={amit} alt="Post Image" />}
       <p className={styles.post__content}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
         mollis maximus neque quis mattis. Donec posuere sem quis vulputate
-        ultrices. Aenean ut massa consequat, ultricies magna et, aliquet dolor.
-        Donec pulvinar tortor et nibh cursus hendrerit. Cras porta, felis id
-        rhoncus convallis, ante ipsum tristique magna, at porta metus tellus non
-        tellus. Mauris non eleifend metus. Nulla fringilla augue sed
-        sollicitudin laoreet. Duis vel dapibus augue. Duis nec quam non odio
-        mollis lacinia. Mauris quis placerat ex.
+        ultrices.
       </p>
       <div className={styles.post__icon}>
         {(isClicked && (

@@ -2,10 +2,9 @@ import Head from "next/head";
 import Post from "@/components/Post";
 import SuggestionBox from "@/components/SuggestionBox";
 import Navbar from "@/components/Navbar";
-import styles from "@/styles/Post.module.css"
+import styles from "@/styles/Post.module.css";
 import CreateButton from "@/components/createButton";
 export default function Post1() {
-
   return (
     <>
       <Head>
@@ -14,27 +13,39 @@ export default function Post1() {
       </Head>
       <main>
         <Navbar />
-        <CreateButton/>
+        <CreateButton />
         <SuggestionBox peopleData={"data"} />
-        <div className={styles.posts__container} >
-        <Post
-          username={"Amogh"}
-          hasImage={true}
-          postId={"i"}
-          hasLiked={false}
-          ishisFriend={true}
-        />
-        <Post username={"Amit"} hasImage={false} postId={"i"} hasLiked={true} ishisFriend={true}/>
-        <Post username={"Aman"} hasImage={true} postId={"i"} hasLiked={false} ishisFriend={true}/>
-        <Post
-          username={"Nishant"}
-          hasImage={true}
-          postId={"i"}
-          hasLiked={false}
-          ishisFriend={false}
-        />
+        <div className={styles.posts__container}>
+          <Post
+            username={"Amogh"}
+            hasImage={true}
+            postId={"i"}
+            hasLiked={false}
+            ishisFriend={true}
+          />
+          <Post
+            username={"Amit"}
+            hasImage={false}
+            postId={"i"}
+            hasLiked={true}
+            ishisFriend={true}
+          />
+          <Post
+            username={"Aman"}
+            hasImage={true}
+            postId={"i"}
+            hasLiked={false}
+            ishisFriend={true}
+          />
+          <Post
+            username={"Nishant"}
+            hasImage={true}
+            postId={"i"}
+            hasLiked={false}
+            ishisFriend={false}
+          />
         </div>
-        <div className={styles.spacer}/>
+        <div className={styles.spacer} />
       </main>
     </>
   );

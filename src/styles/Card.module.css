@@ -1,0 +1,78 @@
+.card__container {
+  background: #fff;
+  margin: 1rem;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.image__container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #000;
+}
+
+.post__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card__info {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__info__left {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  display: inline-block;
+  height: 32px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.avatar__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.user__name {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.follow__btn {
+  color: blueviolet;
+  margin-left: 1rem;
+}
+
+.post__info {
+  padding: 0.5rem 1rem;
+}
+
+.post__caption {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.post__comments {
+  padding: 0 1rem;
+}
+
+.comments__btn {
+  display: flex;
+  justify-content: flex-end;
+}

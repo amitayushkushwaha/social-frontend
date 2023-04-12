@@ -1,162 +1,151 @@
-.post{
-  padding-top: 3%;
-  padding-bottom: 5%;
-  padding-left: 3%;
-  padding-right:3%;
-  margin-bottom: 5%;
-  margin-left: 3%;
-  margin-right:3%;
-  border-radius: 2%;
+.post {
+  padding: 1rem;
   box-shadow: 0 0 32px 2px var(--post-color);
-
-  /* <------------------------------ new styles ------------------------------------------------> */
-  display: inline-block;
   text-align: center;
-  max-width: 800px;
- background-color: var(--post-background-color);
+  background-color: var(--post-background-color);
+  border-radius: 0.5rem;
+  margin-inline: 2%;
+  margin-bottom: 1rem;
 }
 
-.posts__container{
+.posts__container {
   text-align: center;
 }
 
-.post__add{
+.post__add {
   text-align: right;
+  height: auto !important;
+  width: 40px !important;
 }
 
-.post > img{
+.post > img {
   width: 100%;
-  height: auto;
+  height: 300px;
+  object-fit: cover;
 }
 
-.post__username{
-  
-  padding-left: 5%;
+.post__username {
+  padding-left: 1rem;
   /* padding-top: 2%; */
-  font: 1em sans-serif;
+  font: 1.1em sans-serif;
 }
 
-.post__cards{
-  display: flex;
-  align-items: center;
-  border: thin;
-  margin-bottom: 3%;
-}
-
-.post__icon{
+.post__cards {
   display: flex;
   align-items: center;
 }
 
-.post__icons{
+.post__icon {
+  display: flex;
+  align-items: center;
+}
+
+.post__icons {
   color: var(--post-icon-color);
+  height: auto !important;
+  width: 40px !important;
 }
 
-
-.comment__button{
+.comment__button {
   margin-left: auto;
   padding-right: 5%;
   border-radius: 25%;
-  padding:0.25%;
+  padding: 0.25%;
   padding-bottom: 0.5%;
   border: 0;
 }
 
-.post__add{
+.post__add {
   margin-left: auto;
-  color:var(--post-icon-color);
+  color: var(--icon-color);
 }
 
-.post__cards > img{
-border-radius: 50%;
-object-fit: cover;
-/* margin-bottom: 3%; */
-width: var(--post-imagesize) ; /* set the width of the image */
-height: var(--post-imagesize) ; /* set the height of the image */
+.post__cards > img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  width: var(--post-imagesize); /* set the width of the image */
+  height: var(--post-imagesize); /* set the height of the image */
 }
 
-.post__content{
+.post__content {
   overflow-wrap: break-word;
   text-align: left;
   padding: 3% 0 3% 0;
 }
 
-
 .trendingBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1;
-  border-radius: 10%;
-  padding-left: 2%;
-  padding-right: 2%;
-  font-size: 110%;
+  z-index: 99;
+  height: 4rem;
+  aspect-ratio: 1/1;
+  font-size: 2rem;
   background-color: #ff5252;
-  border: 2px solid #ffffff;
-  /* border: 3px dotted green; */
-  color: white;
+  border: none;
+  border-radius: 100%;
+  color: #fff;
   cursor: pointer;
-  
+  box-shadow: 0 0 100px 1px #000;
 }
 
-
-.comment__icon{
-  width:auto;
+.comment__icon {
+  width: auto;
 }
 
-.spacer{
+.spacer {
   height: 60px;
 }
 
+/* 
 @media (min-width: 766px) {
-  .post{
-      border-radius: 20px;
-      padding-bottom: 2.1%;
-      padding-top: 1.6%;
-      box-shadow: 0 0 64px 4px var(--post-color);
+  .post {
+    border-radius: 20px;
+    padding-bottom: 2.1%;
+    padding-top: 1.6%;
+    box-shadow: 0 0 64px 4px var(--post-color);
   }
-  .post > img{
-      width: 100%;
-      height: auto;
+  .post > img {
+    width: 100%;
+    height: auto;
   }
-  .trendingBtn{
-      bottom: 60px;
-      right: 60px;
-      font-size: 220%;
-  }
-
-  .post__username{
-      font-size: 2rem;
+  .trendingBtn {
+    bottom: 60px;
+    right: 60px;
+    font-size: 220%;
   }
 
-  .post__cards > img{
-      height: 70px;
-      width: 70px;
+  .post__username {
+    font-size: 2rem;
   }
 
-  
+  .post__cards > img {
+    height: 70px;
+    width: 70px;
+  }
 }
 
-@media (min-width:900px){
-  .post__content{
-      font-size: 130%;
+@media (min-width: 900px) {
+  .post__content {
+    font-size: 130%;
   }
-  .post__large{
-      height: auto;
-      width: 60px;
+  .post__large {
+    height: auto;
+    width: 60px;
   }
-  .comment__button{
-      margin-left: auto;
-      padding-right: 5%;
-      border-radius: 25%;
-      padding:0.5%;
-      padding-bottom: 1%;
-      border: 0;
-  }
-}
-@media screen and (max-width : 475px){
-  .trendingBtn{
-      padding : 2% 1% 2% 1%;
-      border-radius: 10%;
+  .comment__button {
+    margin-left: auto;
+    padding-right: 5%;
+    border-radius: 25%;
+    padding: 0.5%;
+    padding-bottom: 1%;
+    border: 0;
   }
 }
+@media screen and (max-width: 475px) {
+  .trendingBtn {
+    padding: 2% 1% 2% 1%;
+    border-radius: 10%;
+  }
+} */
