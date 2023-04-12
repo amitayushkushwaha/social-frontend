@@ -1,6 +1,8 @@
 import styles from "@/styles/Dashboard.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import BackButton from "@/components/BackButton";
 var accounts = {
   userName: "@amit_maurya",
   email: "amitmaurya@gmail.com",
@@ -21,6 +23,10 @@ function Change_Info() {
 
   return (
     <div>
+      <Navbar/>
+      <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+        <BackButton/>
+        </div>
       <form className={styles.change_info} onChange={Update_Contact}>
         <input
           type="text"

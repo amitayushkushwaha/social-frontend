@@ -1,110 +1,63 @@
+.sidebarBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+}
 
+.item {
+  margin-top: 1rem;
+  border-radius: 4px;
+  width: 92%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
-.sidebarBox{
-    /* margin-top: 3vh; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
+.item1 {
+  background-color: #74b9ff;
 }
-.item1{
-    margin-top: 3vh;
-    border: none;
-    border-radius:8px;
-    width: 80%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #74b9ff;
-    cursor: pointer;
-    
-}
-.item2{
-    margin-top: 3vh;
-    border: none;
-    border-radius:8px;
-    width: 80%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #a29bfe;
-    cursor: pointer;
 
-    
+.item2 {
+  background-color: #a29bfe;
 }
-.item3{
-    margin-top: 3vh;
-    border: none;
-    border-radius:8px;
-    width: 80%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #55efc4;
-    cursor: pointer;
 
-    
+.item3 {
+  background-color: #55efc4;
 }
-.item4{
-    margin-top: 3vh;
-    border: none;
-    border-radius:8px;
-    width: 80%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff7675;
-    cursor: pointer;
-    
-}
-.item5{
-    margin-top: 3vh;
-    border: none;
-    border-radius:8px;
-    width: 80%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fd79a8;
-    cursor: pointer;
 
+.item4 {
+  background-color: #ff7675;
 }
-.closeSidebar{
-    font-size: 1.2rem;
-    margin-top: 2vh;
-    border: none;
-    border-radius:8px;
-    width: 50%;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff3838;
-    cursor: pointer;
-}
-@media screen and (min-width : 600px){
-    .item1{
-        font-size: 1.5rem;
-    }
-    .item2{
-        font-size: 1.5rem;
-    }
-    .item3{
-        font-size: 1.5rem;
-    }
-    .item4{
-        font-size: 1.5rem;
-    }
-    .item5{
-        font-size: 1.5rem;
-    }
-    .closeSidebar{
-        font-size: 1.5rem;
 
-    }
+.item5 {
+  background-color: #fd79a8;
+}
+
+.closeBtn {
+  background-color: #ff3838;
+  border: none;
+}
+
+@media screen and (min-width: 600px) {
+  .item1 {
+    font-size: 1.5rem;
+  }
+  .item2 {
+    font-size: 1.5rem;
+  }
+  .item3 {
+    font-size: 1.5rem;
+  }
+  .item4 {
+    font-size: 1.5rem;
+  }
+  .item5 {
+    font-size: 1.5rem;
+  }
+  .closeSidebar {
+    font-size: 1.5rem;
+  }
 }

@@ -1,0 +1,67 @@
+.page_container{
+    margin-top: auto;
+    text-align: center;
+    align-items: center;
+    height: 700px;
+    justify-content: center;
+    margin-bottom: auto;
+    background-color: var(--post-background-color);
+}
+
+.app_name{
+    color:var(--icon-color);
+    padding-top: 35%;
+    font-weight: 900;
+    background-color: var(--post-background-color);
+    font-size: 40px;
+}
+
+.form{
+    margin-top: 15%;
+    background-color: var(--post-background-color);
+}
+
+.input{
+    width:60%;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color:#fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem var(--post-color);
+}
+
+.input::placeholder {
+  color: grey;
+}
+
+.button{
+    
+    margin-top: 25px;
+    display: inline-block;
+    border:1px solid #fff;
+    background-color: var(--icon-color);
+    color:#fff;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.link{
+    font-size: 10px;
+    color:blue;
+    padding-top: 8px;
+    display: inline-block;
+}
+
+.link:visited{
+    color:blue;
+}

@@ -3,12 +3,9 @@ import Post from "@/components/Post";
 import SuggestionBox from "@/components/SuggestionBox";
 import Navbar from "@/components/Navbar";
 import styles from "@/styles/Post.module.css"
-import Router from "next/router";
-
+import CreateButton from "@/components/createButton";
 export default function Post1() {
-  function handleButton() {
-    Router.push("/aman");
-  }
+
   return (
     <>
       <Head>
@@ -17,8 +14,9 @@ export default function Post1() {
       </Head>
       <main>
         <Navbar />
+        <CreateButton/>
         <SuggestionBox peopleData={"data"} />
-
+        <div className={styles.posts__container} >
         <Post
           username={"Amogh"}
           hasImage={true}
@@ -26,10 +24,6 @@ export default function Post1() {
           hasLiked={false}
           ishisFriend={true}
         />
-        <button className={styles.trendingBtn} onClick={handleButton}>
-          {" "}
-          Trending ../
-        </button>
         <Post username={"Amit"} hasImage={false} postId={"i"} hasLiked={true} ishisFriend={true}/>
         <Post username={"Aman"} hasImage={true} postId={"i"} hasLiked={false} ishisFriend={true}/>
         <Post
@@ -39,6 +33,8 @@ export default function Post1() {
           hasLiked={false}
           ishisFriend={false}
         />
+        </div>
+        <div className={styles.spacer}/>
       </main>
     </>
   );
