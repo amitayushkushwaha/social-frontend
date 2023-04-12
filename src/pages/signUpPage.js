@@ -13,14 +13,26 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setConfirmedPasseord("");
-    setPassword("");
-    setUsername("");
-    setEmail("");
-    if (confirmedPassword == password) {
+
+    if (confirmedPassword == password && username!="" && password!="" && email!="") {
+      setConfirmedPasseord("");
+      setPassword("");
+      setUsername("");
+      setEmail("");
       router.push("/amogh");
     } else {
-      alert("Passwords did not matched");
+      if(username==""){
+        alert("Username not filled")
+      }
+      else if(email==""){
+        alert("Email not entered");
+      }
+      else if(password==""){
+        alert("Please choose a suitable password")
+      }
+      else {
+        alert("Passwords didn't match")
+      }
     }
   };
   return (

@@ -9,6 +9,7 @@ import Dropdown from "./Dropdown";
 import Sidebar from "./Sidebar";
 import Link from "next/link";
 import { CircleNotifications } from "@mui/icons-material";
+import { TrendingUp } from "@mui/icons-material";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -75,6 +76,9 @@ const Navbar = () => {
           <Link href="/profile"  className={linkstyle.link} >
             <div className={styles.itm}>Profile</div>
           </Link>
+          <Link href="/">
+          <div className={styles.itm}>Logout</div>
+          </Link>
           
           <div className={styles.itm}>ITEM3</div>
           <div className={styles.itm}>ITEM4</div>
@@ -83,6 +87,7 @@ const Navbar = () => {
         </div>
         <div className={styles.icons}>
           <Link href="/notifications"><CircleNotifications/></Link>
+          <Link href="/aman"><TrendingUp/></Link>
           <motion.div
             className={styles.sunny}
             onClick={handleSunnyClick}

@@ -8,6 +8,7 @@ import profile from "assets/images/profileimage5.jpg";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import BackButton from "@/components/BackButton";
+import CreateButton from "@/components/createButton";
 
 export default function allComments() {
   // get the comment count
@@ -43,6 +44,7 @@ export default function allComments() {
       </Head>
       <main>
         <Navbar/>
+        <CreateButton/>
         <div style={{paddingTop:"3%",paddingLeft:"7%",backgroundColor:"var(--post-background-color)"}} >
         <BackButton/>
         </div>

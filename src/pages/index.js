@@ -11,7 +11,12 @@ export default function Home() {
 
   const handleSubmit=(e)=>{
     e.preventDefault();
+    if(username !="" && password!=""){
     router.push("/amogh");
+    }
+    else {
+      alert("Username and password didn't match")
+    }
   }
   return (
     <>
