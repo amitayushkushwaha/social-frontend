@@ -1,26 +1,16 @@
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import CommentIcon from "@mui/icons-material/Comment";
-import AddIcon from "@mui/icons-material/Add";
-import Chillies from "assets/images/background.jpg";
-import styles from "@/styles/Post.module.css";
+import styles from "./../styles/Card.module.css";
 import Image from "next/image";
-import profile from "assets/images/profileimage5.jpg";
-import { FavoriteBorder } from "@mui/icons-material";
-import { useState } from "react";
-import { CommentForm } from "./CommentForm";
-import { CheckCircle } from "@mui/icons-material";
-import Comments from "./Comments";
-import amit from "assets/images/IMG20230331140350.jpg";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import Link from "next/link";
+import { useState } from "react";
+import Comments from "./Comments";
+import { FavoriteBorder, CommentOutlined } from "@mui/icons-material";
+import { CommentForm } from "./CommentForm";
+import avatar from "assets/images/profileimage5.jpg";
+import image from "assets/images/IMG20230331140350.jpg";
 
-export default function Post({
-  username,
-  postId,
-  hasImage,
-  hasLiked,
-  ishisFriend,
-}) {
-  const [isClicked, setIsClicked] = useState(hasLiked);
+const Post = ({ username, postId, hasImage, hasLiked, ishisFriend }) => {
+  const [isLiked, setIsLiked] = useState(hasLiked);
   const [isComment, setIsComment] = useState(false);
   const [isFriend, setIsFriend] = useState(ishisFriend);
   const [areCommentsVisible, setAreCommentsVisible] = useState(false);
@@ -30,9 +20,7 @@ export default function Post({
   });
 
   function handleFavouriteClick() {
-    setIsClicked(!isClicked);
-    //Change into dataBase
-    hasLiked = isClicked;
+    setIsLiked(!isLiked);
   }
 
   function handleComment() {
@@ -52,51 +40,46 @@ export default function Post({
   }
 
   return (
-    <div className={styles.post}>
-      <div className={styles.post__cards}>
-        <Image src={profile} alt="Profile Image" />
-
-        <p className={styles.post__username}>
-          {" "}
-          <Link href="/profile"> {username}</Link>
-        </p>
-
-        {(!isFriend && (
-          <AddIcon
-            className={`${styles.post__add} ${styles.post__large}`}
-            onClick={handleFriend}
-          />
-        )) ||
-          (isFriend && (
-            <CheckCircle
-              className={`${styles.post__add} ${styles.post__large}`}
-              onClick={handleFriend}
-            />
-          ))}
+    <div className={styles.card__container}>
+      <div className={styles.image__container}>
+        <Image src={image} alt="Demo Image" className={styles.post__image} />
       </div>
-      {hasImage && <Image src={amit} alt="Post Image" />}
-      <p className={styles.post__content}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        mollis maximus neque quis mattis. Donec posuere sem quis vulputate
-        ultrices.
-      </p>
-      <div className={styles.post__icon}>
-        {(isClicked && (
-          <FavoriteIcon
-            className={`${styles.post__icons} ${styles.post__large}`}
-            onClick={handleFavouriteClick}
-          />
-        )) ||
-          (!isClicked && (
-            <FavoriteBorder
-              className={`${styles.post__icons} ${styles.post__large}`}
-              onClick={handleFavouriteClick}
+      <div className={styles.card__info}>
+        <div className={styles.card__info__left}>
+          <span className={styles.avatar}>
+            <Image
+              src={avatar}
+              alt="Demo Image"
+              className={styles.avatar__image}
             />
-          ))}
-        <CommentIcon
-          className={`${styles.post__icons} ${styles.post__large} ${styles.post__add}`}
-          onClick={handleComment}
-        />
+          </span>
+          <Link href="/profile">
+            {" "}
+            <span className={styles.user__name}>Amit Kushwaha</span>
+          </Link>
+
+          <span className={styles.follow__btn} onClick={handleFriend} >{isFriend? "Following":"Follow +"}</span>
+        </div>
+        <div className="card__info-right">
+          <span className="like__btn">
+            {(isLiked && <FavoriteIcon fontSize="medium" onClick={handleFavouriteClick}/>) || (
+              <FavoriteBorder fontSize="medium" onClick={handleFavouriteClick}/>
+            )}
+          </span>
+        </div>
+      </div>
+      <div className={styles.post__info}>
+        <span className={styles.post__caption}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo,
+          doloremque ullam illum iste, dignissimos voluptatum molestiae, sit
+          sint laboriosam doloribus at fugit nulla suscipit. Sunt soluta
+          aspernatur aliquid quisquam facere!
+        </span>
+      </div>
+      <div className={styles.post__comments}>
+        <div className={styles.comments__btn}>
+          <CommentOutlined fontSize="medium" onClick={handleComment} />
+        </div>
       </div>
       {isComment && (
         <CommentForm setIsComment={setIsComment} URL={"https://............"} />
@@ -104,4 +87,6 @@ export default function Post({
       {areCommentsVisible && render}
     </div>
   );
-}
+};
+
+export default Post;

@@ -23,8 +23,8 @@ export default function Notifications() {
       </Head>
       <main>
         <Navbar/>
+        <BackButton title="Notifications"/>
         <div className={styles.allMessageContainer}>
-            <p className={styles.heading}> <BackButton/> messages</p>
             {messages}
         </div>
         

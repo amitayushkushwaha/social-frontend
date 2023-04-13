@@ -1,98 +1,92 @@
-.post{
-  padding-top: 3%;
-  padding-bottom: 5%;
-  padding-left: 3%;
-  padding-right:3%;
-  margin-bottom: 5%;
-  margin-left: 3%;
-  margin-right:3%;
-  margin-top: 3%;
-  border-radius: 2%;
-  box-shadow: 0 0 32px 2px var(--post-color);
-  display: inline-block;
-  text-align: center;
-  max-width: 800px;
- background-color: var(--post-background-color);
+.card__container {
+  background: #fff;
+  margin: 1rem;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding-bottom: 1rem;
 }
 
-.container{
-  text-align: center;
-  background-color: var(--post-background-color);
-}
-
-.post > img{
+.image__container {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1/1;
+  background: #000;
 }
 
-.post__username{
-  
-  padding-left: 5%;
-  font: 1em ;
+.post__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.post__cards{
+.card__info {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  border: thin;
-  padding-bottom: 3%;
+  justify-content: space-between;
 }
 
-.post__cards > img{
-  border-radius: 50%;
+.card__info__left {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  display: inline-block;
+  height: 32px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.avatar__image {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  width: var(--post-imagesize) ; /* set the width of the image */
-  height: var(--post-imagesize) ; /* set the height of the image */
 }
 
-.post__content{
-    overflow-wrap: break-word;
-    text-align: left;
-    padding: 3% 0 3% 0;
+.user__name {
+  margin-left: 0.5rem;
+  font-weight: bold;
 }
 
-
-
-@media (min-width: 766px) {
-  .post{
-      border-radius: 20px;
-      padding-bottom: 2.1%;
-      padding-top: 1.6%;
-      box-shadow: 0 0 64px 4px var(--post-color);
-  }
-  .post > img{
-      width: 100%;
-      height: auto;
-  }
-
-  .post__username{
-      font-size: 2rem;
-  }
-
-  .post__cards > img{
-      height: 70px;
-      width: 70px;
-  }
-
-  
+.follow__btn {
+  color: blueviolet;
+  margin-left: 1rem;
 }
 
-@media (min-width:900px){
-  .post__content{
-      font-size: 130%;
-  }
+.post__info {
+  padding: 0.5rem 1rem;
 }
+
+.post__caption {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.post__comments {
+  padding: 0 1rem;
+}
+
+.comments__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 
 
 /*  <---------------------------------------------- styles for comments ------------------------------------------------------------>  */
 .comment__name{
-  color: var(--post-icon-color);
+  color: #000;
   text-align: left;
   margin: 0;
   font-size: 2rem;
-  font-size: 5vw;
-  padding-bottom: 1.2%;
+  padding-bottom: 1rem;
   display: block;
 }
 .comment__div {
@@ -101,12 +95,9 @@
   flex-shrink: 1;
   border-radius: 7px;
   background-color: white;
-  padding-bottom: 4%;
-  padding-left: 2%;
-  padding-right: 3%;
-  padding-top: 1.7%;
-  margin-top: 1.3%;
-  margin-bottom: 1.3%;
+  padding: 1rem;
+  margin-block: 1rem;
+  border:2px solid #000;
 }
 
 .userInfo {
@@ -131,6 +122,7 @@
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
+  object-fit: cover;
 }
 
 .username {

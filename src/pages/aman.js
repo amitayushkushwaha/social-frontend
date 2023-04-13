@@ -14,15 +14,7 @@ export default function trending() {
       <main>
         <CreateButton />
         <Navbar />
-        <div
-          style={{
-            paddingTop: "3%",
-            paddingLeft: "3%",
-            backgroundColor: "var(--post-background-color)",
-          }}
-        >
-          <BackButton />
-        </div>
+        <BackButton title="Trending"/>
 
         {/* <Topbar /> */}
         <Trending />

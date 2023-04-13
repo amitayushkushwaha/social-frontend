@@ -3,7 +3,9 @@
     background-color: var(--icon-color);
     opacity:0.8;
     transition: 0.4s ease-in-out;
-    margin-right: 5%;
+    height:2.8rem;
+    position: absolute;
+    left:0;
 }
 
 .back_button:hover{
@@ -12,4 +14,19 @@
     background-color: #fff;
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.container{
+    
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        height: 2.8rem;
+        position: relative;
+}
+
+.pageName{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-block:auto
 }
