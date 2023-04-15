@@ -7,7 +7,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import BackButton from "@/components/BackButton";
 import { useState } from "react";
 import { accounts } from "./change_Info";
-
+import Image from "next/image";
 var profile_follower = [
   {
     name: "Following",
@@ -50,10 +50,11 @@ export default function Profile() {
         </div>
         <div className={styles.profile_image}>
           <figure>
-            <img
-              src={avatar.src}
+            <Image
+              src={avatar}
               alt="profile"
               style={{ objectFit: "cover" }}
+          
             />
             <figcaption>
               <h3>{accounts.userName}</h3>

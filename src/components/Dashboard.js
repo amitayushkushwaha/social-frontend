@@ -50,7 +50,7 @@ export default function Dashboard() {
         <div className={styles.dashboardContainer}>
           <div className={styles.dashboardHeader}>
             <div className={styles.headerIcon}>
-              <img src={avatar.src} fill style={{ objectFit: "cover" }} alt="avatar"/>
+              <Image src={avatar} style={{ objectFit: "cover" }} alt="avatar"/>
             </div>
             <div className={styles.headerContent}>
             <Link href="/profile" legacyBehavior>
