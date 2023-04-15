@@ -30,6 +30,7 @@ function Account() {
       </figure>
 
       <h3>{accounts.userName}</h3>
+      
       <h4>{accounts.email}</h4>
       <h4>{accounts.tel}</h4>
       <Link href="/change_Info" legacyBehavior>

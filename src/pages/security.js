@@ -5,10 +5,12 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import BackButton from "@/components/BackButton";
 export default function Security() {
   return (
-    <div className={styles.security}>
-      <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+    <div>
+    <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
         <BackButton/>
         </div>
+    <div className={styles.security}>
+      
       <i>
         <LockOpenIcon />
       </i>
@@ -17,6 +19,7 @@ export default function Security() {
           <h4>Manage Password</h4>
         </a>
       </Link>
+    </div>
     </div>
   );
 }

@@ -31,9 +31,9 @@ export default function Profile() {
 
   return (
     <div className={styles.profile}>
-      <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
+      {/* <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
         <BackButton/>
-        </div>
+        </div> */}
       <div className={styles.profile_upper}>
         <div className={styles.profile_header}>
           <i>
@@ -78,6 +78,30 @@ export default function Profile() {
           </i>
         </div>
       </div>
+      <div className={styles.post}>
+      <p>Post</p>
+      </div>
+      <div className={styles.postContent}>
+<p></p>
+<p></p>
+<p></p>
+      </div>
+      <div className={styles.postContent}>
+<p></p>
+<p></p>
+<p></p>
+      </div>
+      <div className={styles.postContent}>
+<p></p>
+<p></p>
+<p></p>
+      </div>
+      <div className={styles.postContent}>
+<p></p>
+<p></p>
+<p></p>
+      </div>
+      
     </div>
   );
 }
