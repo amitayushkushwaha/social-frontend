@@ -33,9 +33,9 @@
 .contentBox{
     border: none;
     border-radius: 2%;
-    box-shadow: 0 0 32px 2px var(--post-color);
+    /* box-shadow: 0 0 32px 1px var(--post-color); */
     border-radius: 8px; 
-    padding: 3%;
+    /* padding: 3%; */
     margin: 2%;
     display: flex;
     position: relative;
@@ -47,25 +47,24 @@
     top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
-  font-size: 5vw;
+  font-size: 2.5rem;
   color: #FDF6F0;
 }
 
 .contentBox > img{
    
     height: auto;
-    max-height: 230px;
+    max-height: 100px;
     width: 100%;
-    filter: blur(5px);
+    filter: blur(2px);
+    border-radius: 10px;
     object-fit: cover;
 }
 .content{
     margin: 0 0 5% 0;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
     
 }
 .posts{
@@ -73,10 +72,8 @@
 }
 
 .topic{
-    padding-bottom: 5%;
-    padding-top: 1%;
-   font-size: 1.5rem;
-   font-size: 3vw;
+   font-size: 2rem;
+    margin: 1rem 0;
 }
 
 .posts_container{

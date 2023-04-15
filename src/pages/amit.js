@@ -1,4 +1,3 @@
-
 import Dashboard from "@/components/Dashboard";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
@@ -12,11 +11,9 @@ export default function trending() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <Navbar/>
-        <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
-        <BackButton/>
-        </div>
-        <Dashboard/>
+        <Navbar />
+        <BackButton title="Accounts"/>
+        <Dashboard />
         {/* <Sidebar/> */}
       </main>
     </>

@@ -1,15 +1,20 @@
 import styles from "./../styles/Card.module.css";
 import Image from "next/image";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import CommentIcon from "@mui/icons-material/Comment";
+import AddIcon from "@mui/icons-material/Add";
+import profile from "assets/images/profileimage5.jpg";
+import { CheckCircle } from "@mui/icons-material";
+import amit from "assets/images/IMG20230331140350.jpg";
 import Link from "next/link";
 import { useState } from "react";
-import Comments from "./Comments";
+import Comments from "@/components/Comments";
 import { FavoriteBorder, CommentOutlined } from "@mui/icons-material";
-import { CommentForm } from "./CommentForm";
+import { CommentForm } from "@/components/CommentForm";
 import avatar from "assets/images/profileimage5.jpg";
 import image from "assets/images/IMG20230331140350.jpg";
 
-const Post = ({ username, postId, hasImage, hasLiked, ishisFriend }) => {
+const Card = ({ username, postId, hasImage, hasLiked, ishisFriend }) => {
   const [isLiked, setIsLiked] = useState(hasLiked);
   const [isComment, setIsComment] = useState(false);
   const [isFriend, setIsFriend] = useState(ishisFriend);
@@ -89,4 +94,4 @@ const Post = ({ username, postId, hasImage, hasLiked, ishisFriend }) => {
   );
 };
 
-export default Post;
+export default Card;
