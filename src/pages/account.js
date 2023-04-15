@@ -25,7 +25,7 @@ function Account() {
       <div className={styles.account}>
         <figure>
           <Image
-            src={avatar.src}
+            src={avatar}
             alt={accounts.userName}
             className={styles.imga}
             style={{ objectFit: "cover" }}

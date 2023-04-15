@@ -195,7 +195,7 @@
   background-color:#f7e9dd;
  height: 100vh;
   padding: 1rem;
- 
+
   border-radius: 1rem;
   line-height: 1.6;
   font-weight: bolder;
@@ -207,7 +207,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .about_header{
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   margin-bottom: 1.5rem;
   display: flex;
   justify-items: center;
