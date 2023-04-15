@@ -53,7 +53,12 @@ export default function Dashboard() {
               <img src={avatar.src} fill style={{ objectFit: "cover" }} alt="avatar"/>
             </div>
             <div className={styles.headerContent}>
-              <h4>{accounts.userName}</h4>
+            <Link href="/profile" legacyBehavior>
+                    <a className={styles.anchor}>
+                    <h4>{accounts.userName}</h4>
+                    </a>
+                  </Link>
+              
               <p className={styles.dashboardemail}>{accounts.email}</p>
             </div>
           </div>

@@ -33,15 +33,15 @@ function Account() {
           <figcaption className={styles.caption}>Profile Picture</figcaption>
         </figure>
 
-        <h3>{accounts.userName}</h3>
-        <h4>{accounts.email}</h4>
-        <h4>{accounts.tel}</h4>
-        <Link href="/change_Info" legacyBehavior>
-          <a className={styles.anchor}>
-            <h4>Change Info</h4>
-          </a>
-        </Link>
-      </div>
+      <h3>{accounts.userName}</h3>
+      <h4>{accounts.email}</h4>
+      <h4>{accounts.tel}</h4>
+      <Link href="/change_Info" legacyBehavior>
+        <a className={styles.anchor}>
+          <h4>Change Info</h4>
+        </a>
+      </Link>
+    </div>
     </div>
   );
 }
