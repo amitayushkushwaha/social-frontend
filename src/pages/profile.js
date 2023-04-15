@@ -29,9 +29,7 @@ export default function Profile() {
 
   return (
     <div className={styles.profile}>
-      <div style={{paddingTop:"3%",paddingLeft:"3%",backgroundColor:"var(--post-background-color)"}} >
-        <BackButton/>
-        </div>
+      <BackButton title="Accout"/>
       <div className={styles.profile_upper}>
         <div className={styles.profile_header}>
           <i>

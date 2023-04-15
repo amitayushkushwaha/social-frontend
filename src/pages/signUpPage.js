@@ -59,7 +59,6 @@ export default function Home() {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
-            <br />
             <input
               className={styles.input}
               type="password"
@@ -67,7 +66,6 @@ export default function Home() {
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
-            <br />
             <input
               className={styles.input}
               type="password"
@@ -75,9 +73,7 @@ export default function Home() {
               value={confirmedPassword}
               onChange={(event) => setConfirmedPasseord(event.target.value)}
             />
-            <br />
             <button type="submit" className={styles.button}>Sign Up</button>
-            <br/>
             <Link href="/" className={styles.link}>Already a user? Login here</Link>
           </form>
         </div>

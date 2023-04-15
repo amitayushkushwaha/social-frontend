@@ -3,12 +3,12 @@ import styles from "@/styles/allCommentsPage.module.css";
 import commentProfileImage from "assets/images/profileimage3.jpg";
 import Image from "next/image";
 import Head from "next/head";
-import Chillies from "assets/images/background.jpg";
-import profile from "assets/images/profileimage5.jpg";
+import image from "assets/images/profileimage5.jpg";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import BackButton from "@/components/BackButton";
 import CreateButton from "@/components/createButton";
+import avatar from "assets/images/profileimage5.jpg";
 
 export default function allComments() {
   // get the comment count
@@ -18,11 +18,11 @@ export default function allComments() {
 
   for (var i = 0; i < commentCount; ++i) {
     comments.push(
-      <div className={styles.comment__div} key={i} >
+      <div className={styles.comment__div} key={i}>
         <div className={styles.userInfo}>
           <Image src={commentProfileImage} alt={"Profile Image"} />
           <Link href="/profile">
-          <span className={styles.username}>Amogh Tiwari</span>
+            <span className={styles.username}>Amogh Tiwari</span>
           </Link>
         </div>
         <p className={styles.commentContent}>
@@ -43,45 +43,44 @@ export default function allComments() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <Navbar/>
-        <CreateButton/>
-        <div style={{paddingTop:"3%",paddingLeft:"7%",backgroundColor:"var(--post-background-color)"}} >
-        <BackButton/>
-        </div>
-       
+        <Navbar />
+        <CreateButton />
+        <BackButton title="Comments"/>
         <div className={styles.container}>
-          <div className={styles.post}>
-            <div className={styles.post__cards}>
+          <div className={styles.card__container}>
+            <div className={styles.image__container}>
               <Image
-                className={styles.post__profile__image}
-                src={profile}
-                alt="Profile Image"
-              />
-              <p className={styles.post__username}> <Link href="/profile">  {"Amogh Tiwari"} </Link></p>
-            </div>
-
-            {true && (
-              <Image
+                src={image}
+                alt="Demo Image"
                 className={styles.post__image}
-                src={Chillies}
-                alt="Post Image"
               />
-            )}
-            <p className={styles.post__content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum mollis maximus neque quis mattis. Donec posuere sem
-              quis vulputate ultrices. Aenean ut massa consequat, ultricies
-              magna et, aliquet dolor. Donec pulvinar tortor et nibh cursus
-              hendrerit. Cras porta, felis id rhoncus convallis, ante ipsum
-              tristique magna, at porta metus tellus non tellus. Mauris non
-              eleifend metus. Nulla fringilla augue sed sollicitudin laoreet.
-              Duis vel dapibus augue. Duis nec quam non odio mollis lacinia.
-              Mauris quis placerat ex.
-            </p>
+            </div>
+            <div className={styles.card__info}>
+              <div className={styles.card__info__left}>
+                <span className={styles.avatar}>
+                  <Image
+                    src={avatar}
+                    alt="Demo Image"
+                    className={styles.avatar__image}
+                  />
+                </span>
+                <Link href="/profile">
+                  {" "}
+                  <span className={styles.user__name}>Amit Kushwaha</span>
+                </Link>
+              </div>
+            </div>
+            <div className={styles.post__info}>
+              <span className={styles.post__caption}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo,
+                doloremque ullam illum iste, dignissimos voluptatum molestiae,
+                sit sint laboriosam doloribus at fugit nulla suscipit. Sunt
+                soluta aspernatur aliquid quisquam facere!
+              </span>
+            </div>
           </div>
 
           <div className={styles.comment__container}>
-            <h2 className={styles.comment__name}>Comments...</h2>
             {comments}
           </div>
         </div>

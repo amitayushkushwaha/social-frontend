@@ -12,15 +12,7 @@ export default function trending() {
       </Head>
       <main>
         <Navbar />
-        <div
-          style={{
-            paddingTop: "3%",
-            paddingLeft: "3%",
-            backgroundColor: "var(--post-background-color)",
-          }}
-        >
-          <BackButton />
-        </div>
+        <BackButton title="Accounts"/>
         <Dashboard />
         {/* <Sidebar/> */}
       </main>
